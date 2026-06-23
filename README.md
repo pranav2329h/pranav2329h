@@ -23,7 +23,7 @@ Computer Science & AI Graduate | Frontend Developer | ML Enthusiast | DevOps Lea
 - 📫 Reach me at **pranav2329h@gmail.com**
 
 - 🌐 Portfolio:
-https://portfolio-three-flax-91lud2v3hw.vercel.app/
+https://new-portfolio-five-rosy.vercel.app/#
 
 ---
 
@@ -39,7 +39,7 @@ https://portfolio-three-flax-91lud2v3hw.vercel.app/
 <img src="https://skillicons.dev/icons?i=gmail" />
 </a>
 
-<a href="https://portfolio-three-flax-91lud2v3hw.vercel.app/">
+<a href="https://new-portfolio-five-rosy.vercel.app/#">
 <img src="https://img.shields.io/badge/Portfolio-Visit-success?style=for-the-badge" />
 </a>
 
