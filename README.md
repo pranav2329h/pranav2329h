@@ -20,7 +20,7 @@ Computer Science & AI Graduate | Frontend Developer | ML Enthusiast | DevOps Lea
 
 - 💡 Building **AI Powered Applications**
 
-- 📫 Reach me at **your-email@gmail.com**
+- 📫 Reach me at **pranav2329h@gmail.com**
 
 - 🌐 Portfolio:
 https://portfolio-three-flax-91lud2v3hw.vercel.app/
