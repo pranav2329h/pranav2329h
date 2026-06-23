@@ -1,69 +1,243 @@
-# 💫 About Me:
-🔭 I’m currently working on Python, React, Angular, AI/ML models <br>  
-👯 I’m looking to collaborate on Machine Learning & AI <br>  
-🤝 I’m looking for help with Advanced ML/DL techniques, DevOps / MLOps <br>  
-🌱 I’m currently learning Natural Language Processing, (AWS, Azure, GCP) for AI applications <br>  
-⚡ Fun fact: 🎮 playing strategy games, 🎧 exploring music, or ☕ brewing the perfect coffee  
+<h1 align="center">Hi 👋, I'm Pranav Hydrabade</h1>
+
+<h3 align="center">
+Computer Science & AI Graduate | Frontend Developer | ML Enthusiast | DevOps Learner
+</h3>
+
+<p align="center">
+<img src="https://readme-typing-svg.herokuapp.com?font=Poppins&size=28&duration=4000&color=00FF99&center=true&vCenter=true&width=800&lines=Computer+Science+and+AI+Graduate;Frontend+Developer;Machine+Learning+Engineer;DevOps+Learner;Building+AI+Powered+Applications" />
+</p>
 
 ---
 
-## 🌐 Socials:
-[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://www.facebook.com/pranav.hydrabade)  
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://www.instagram.com/mr.pranav_h/)  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pranav-hydrabade-10952a255/)  
-[![Mastodon](https://img.shields.io/badge/Mastodon-%232B90D9?logo=mastodon&logoColor=white)](https://mastodon.social/@PranavHydrabade)  
-[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:pranav2329k@gmail.com)  
+# 🚀 About Me
+
+- 🔭 Currently working on **Python, Flask, React, AI and ML Projects**
+
+- 🌱 Learning **Docker, Kubernetes, Jenkins, AWS, Terraform**
+
+- 👯 Interested in **Artificial Intelligence, DevOps and Full Stack Development**
+
+- 💡 Building **AI Powered Applications**
+
+- 📫 Reach me at **your-email@gmail.com**
+
+- 🌐 Portfolio:
+https://portfolio-three-flax-91lud2v3hw.vercel.app/
 
 ---
 
-# 💻 Tech Stack:
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) 
-![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) 
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) 
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) 
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) 
-![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white) 
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) 
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)  
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white) 
-![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white) 
-![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase) 
-![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white) 
-![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white)  
-![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white) 
-![Angular.js](https://img.shields.io/badge/angular.js-%23E23237.svg?style=for-the-badge&logo=angularjs&logoColor=white) 
-![Chart.js](https://img.shields.io/badge/chart.js-F5788D.svg?style=for-the-badge&logo=chart.js&logoColor=white)  
-![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white) 
-![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi) 
-![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) 
-![Jinja](https://img.shields.io/badge/jinja-white.svg?style=for-the-badge&logo=jinja&logoColor=black)  
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) 
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) 
-![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)  
-![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&logo=apache&logoColor=white) 
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) 
-![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)  
-![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white) 
-![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)  
-![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) 
-![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) 
-![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) 
-![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) 
-![SciPy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=white) 
-![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)  
+# 🌐 Connect With Me
+
+<p align="left">
+
+<a href="https://linkedin.com/in/YOUR-LINKEDIN">
+<img src="https://skillicons.dev/icons?i=linkedin" />
+</a>
+
+<a href="mailto:YOURMAIL@gmail.com">
+<img src="https://skillicons.dev/icons?i=gmail" />
+</a>
+
+<a href="https://portfolio-three-flax-91lud2v3hw.vercel.app/">
+<img src="https://img.shields.io/badge/Portfolio-Visit-success?style=for-the-badge" />
+</a>
+
+</p>
 
 ---
 
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=pranav2329h&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>  
-![](https://nirzak-streak-stats.vercel.app/?user=pranav2329h&theme=dark&hide_border=false)<br/>  
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=pranav2329h&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)  
+# 💻 Tech Stack
 
-### 🔝 Top Contributed Repo
-![](https://github-contributor-stats.vercel.app/api?username=pranav2329h&limit=5&theme=dark&combine_all_yearly_contributions=true)  
+<p align="center">
+
+<img src="https://skillicons.dev/icons?i=python,java,javascript,typescript"/>
+
+<br>
+
+<img src="https://skillicons.dev/icons?i=html,css,react,tailwind"/>
+
+<br>
+
+<img src="https://skillicons.dev/icons?i=flask,django,nodejs"/>
+
+<br>
+
+<img src="https://skillicons.dev/icons?i=mysql,mongodb,firebase"/>
+
+<br>
+
+<img src="https://skillicons.dev/icons?i=docker,kubernetes,aws,jenkins"/>
+
+<br>
+
+<img src="https://skillicons.dev/icons?i=git,github,linux,vscode"/>
+
+</p>
 
 ---
 
-[![](https://visitcount.itsvg.in/api?id=pranav2329h&icon=2&color=0)](https://visitcount.itsvg.in)  
+# 📊 GitHub Stats
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+<p align="center">
+
+<img height="180em"
+src="https://github-readme-stats.vercel.app/api?username=pranav2329h&show_icons=true&theme=tokyonight"/>
+
+<img height="180em"
+src="https://github-readme-stats.vercel.app/api/top-langs/?username=pranav2329h&layout=compact&theme=tokyonight"/>
+
+</p>
+
+---
+
+# 🔥 GitHub Streak
+
+<p align="center">
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=pranav2329h&theme=tokyonight"/>
+
+</p>
+
+---
+
+# 📈 Contribution Graph
+
+<p align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=pranav2329h&theme=react-dark"/>
+
+</p>
+
+---
+
+# 🏆 GitHub Trophies
+
+<p align="center">
+
+<img src="https://github-profile-trophy.vercel.app/?username=pranav2329h&theme=radical&row=1&column=7"/>
+
+</p>
+
+---
+
+# 🚀 Featured Projects
+
+### 🌍 VayuCast
+
+AI Based Pollution Hotspot Prediction System
+
+✅ AQI Prediction
+
+✅ Wind Analysis
+
+✅ Heatmaps
+
+✅ Human Exposure Analysis
+
+✅ Decision Support System
+
+
+---
+
+### 💰 Credisure
+
+Machine Learning Loan Approval Platform
+
+✅ Risk Prediction
+
+✅ SHAP Explainability
+
+✅ Dashboard Analytics
+
+✅ Firebase Authentication
+
+---
+
+### 🤖 AI Finance Chatbot
+
+✅ LangFlow
+
+✅ NLP
+
+✅ Financial Insights
+
+✅ Real Time Market Information
+
+---
+
+### 🎤 Voice Controlled AI Assistant
+
+✅ Speech Recognition
+
+✅ Voice Commands
+
+✅ Python Automation
+
+---
+
+# ⚡ Current Learning
+
+<details>
+
+<summary>Click Here</summary>
+
+### DevOps
+
+- Docker
+
+- Kubernetes
+
+- Jenkins
+
+- Terraform
+
+- AWS
+
+### Machine Learning
+
+- Scikit Learn
+
+- NLP
+
+- Random Forest
+
+- XGBoost
+
+- Deep Learning
+
+### Frontend
+
+- React
+
+- Tailwind
+
+- Next.js
+
+</details>
+
+---
+
+# 🐍 Contribution Snake
+
+![Snake Animation](https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg)
+
+---
+
+# ✍️ Random Dev Quote
+
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+
+---
+
+# 👀 Visitor Count
+
+![](https://komarev.com/ghpvc/?username=pranav2329h&color=brightgreen)
+
+---
+
+<h3 align="center">
+
+⭐ Thanks for visiting my profile ⭐
+
+</h3>
