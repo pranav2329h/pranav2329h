@@ -1,243 +1,267 @@
 <h1 align="center">Hi 👋, I'm Pranav Hydrabade</h1>
 
-<h3 align="center">
-Computer Science & AI Graduate | Frontend Developer | ML Enthusiast | DevOps Learner
-</h3>
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=600&size=26&duration=3000&pause=1000&color=00F5A0&center=true&vCenter=true&width=850&lines=Computer+Science+%26+AI+Graduate;Frontend+Developer;AI+%26+Machine+Learning+Enthusiast;Full+Stack+Developer;DevOps+Learner;Building+AI-Powered+Applications" />
+</p>
 
 <p align="center">
-<img src="https://readme-typing-svg.herokuapp.com?font=Poppins&size=28&duration=4000&color=00FF99&center=true&vCenter=true&width=800&lines=Computer+Science+and+AI+Graduate;Frontend+Developer;Machine+Learning+Engineer;DevOps+Learner;Building+AI+Powered+Applications" />
+  <a href="https://new-portfolio-five-rosy.vercel.app/">
+    <img src="https://img.shields.io/badge/Portfolio-00F5A0?style=for-the-badge&logo=vercel&logoColor=black" />
+  </a>
+  <a href="mailto:pranav2329h@gmail.com">
+    <img src="https://img.shields.io/badge/Email-FF4B4B?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://github.com/pranav2329h">
+    <img src="https://img.shields.io/badge/GitHub-111111?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
 </p>
 
 ---
 
-# 🚀 About Me
+## 🚀 About Me
 
-- 🔭 Currently working on **Python, Flask, React, AI and ML Projects**
+I'm a **Computer Science & AI graduate** focused on building practical software using **AI, Machine Learning, modern frontend technologies, and backend systems**.
 
-- 🌱 Learning **Docker, Kubernetes, Jenkins, AWS, Terraform**
-
-- 👯 Interested in **Artificial Intelligence, DevOps and Full Stack Development**
-
-- 💡 Building **AI Powered Applications**
-
-- 📫 Reach me at **pranav2329h@gmail.com**
-
-- 🌐 Portfolio:
-https://new-portfolio-five-rosy.vercel.app/#
+* 🔭 Currently working with **Python, Flask, React, AI & ML**
+* 🌱 Currently learning **Docker, Kubernetes, Jenkins, AWS & Terraform**
+* 🤖 Interested in **Artificial Intelligence & Machine Learning**
+* 💻 Building **Full Stack & AI-powered applications**
+* ⚙️ Exploring **DevOps, Cloud & CI/CD**
+* 📚 Continuously improving my software engineering skills
+* 📫 Email: **[pranav2329h@gmail.com](mailto:pranav2329h@gmail.com)**
+* 🌐 Portfolio: **https://new-portfolio-five-rosy.vercel.app/**
 
 ---
 
-# 🌐 Connect With Me
+## 🧰 Tech Stack
 
-<p align="left">
+### 👨‍💻 Programming Languages
 
-<a href="https://linkedin.com/in/YOUR-LINKEDIN">
-<img src="https://skillicons.dev/icons?i=linkedin" />
-</a>
+<p>
+<img src="https://skillicons.dev/icons?i=python,java,javascript,typescript" />
+</p>
 
-<a href="mailto:YOURMAIL@gmail.com">
-<img src="https://skillicons.dev/icons?i=gmail" />
-</a>
+### 🎨 Frontend
 
-<a href="https://new-portfolio-five-rosy.vercel.app/#">
-<img src="https://img.shields.io/badge/Portfolio-Visit-success?style=for-the-badge" />
-</a>
+<p>
+<img src="https://skillicons.dev/icons?i=html,css,react,tailwind,nextjs" />
+</p>
 
+### ⚙️ Backend
+
+<p>
+<img src="https://skillicons.dev/icons?i=flask,django,nodejs,spring" />
+</p>
+
+### 🗄️ Databases & Cloud
+
+<p>
+<img src="https://skillicons.dev/icons?i=mysql,mongodb,firebase,aws" />
+</p>
+
+### ☁️ DevOps & Tools
+
+<p>
+<img src="https://skillicons.dev/icons?i=docker,kubernetes,jenkins,terraform,git,github,linux,vscode" />
 </p>
 
 ---
 
-# 💻 Tech Stack
+## 🧠 AI & Machine Learning
 
-<p align="center">
-
-<img src="https://skillicons.dev/icons?i=python,java,javascript,typescript"/>
-
-<br>
-
-<img src="https://skillicons.dev/icons?i=html,css,react,tailwind"/>
-
-<br>
-
-<img src="https://skillicons.dev/icons?i=flask,django,nodejs"/>
-
-<br>
-
-<img src="https://skillicons.dev/icons?i=mysql,mongodb,firebase"/>
-
-<br>
-
-<img src="https://skillicons.dev/icons?i=docker,kubernetes,aws,jenkins"/>
-
-<br>
-
-<img src="https://skillicons.dev/icons?i=git,github,linux,vscode"/>
-
+<p>
+<img src="https://skillicons.dev/icons?i=python,tensorflow,pytorch" />
 </p>
+
+**Areas I'm working with:**
+
+`Machine Learning` • `NLP` • `Deep Learning` • `Random Forest` • `XGBoost` • `SHAP` • `AI Applications`
 
 ---
 
-# 📊 GitHub Stats
-
-<p align="center">
-
-<img height="180em"
-src="https://github-readme-stats.vercel.app/api?username=pranav2329h&show_icons=true&theme=tokyonight"/>
-
-<img height="180em"
-src="https://github-readme-stats.vercel.app/api/top-langs/?username=pranav2329h&layout=compact&theme=tokyonight"/>
-
-</p>
-
----
-
-# 🔥 GitHub Streak
-
-<p align="center">
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=pranav2329h&theme=tokyonight"/>
-
-</p>
-
----
-
-# 📈 Contribution Graph
-
-<p align="center">
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=pranav2329h&theme=react-dark"/>
-
-</p>
-
----
-
-# 🏆 GitHub Trophies
-
-<p align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=pranav2329h&theme=radical&row=1&column=7"/>
-
-</p>
-
----
-
-# 🚀 Featured Projects
+## 🚀 Featured Projects
 
 ### 🌍 VayuCast
 
-AI Based Pollution Hotspot Prediction System
+**AI-Based Pollution Hotspot Prediction System**
 
-✅ AQI Prediction
+> A decision-support platform designed to analyze environmental conditions and predict pollution hotspots.
 
-✅ Wind Analysis
+**Key Features**
 
-✅ Heatmaps
-
-✅ Human Exposure Analysis
-
-✅ Decision Support System
-
+* 🌫️ AQI Prediction
+* 🌬️ Wind Analysis
+* 🗺️ Pollution Heatmaps
+* 👥 Human Exposure Analysis
+* 📊 Data Visualization
+* 🧠 AI/ML-Based Prediction
+* ⚡ Decision Support System
 
 ---
 
 ### 💰 Credisure
 
-Machine Learning Loan Approval Platform
+**Machine Learning Loan Approval Platform**
 
-✅ Risk Prediction
+> An ML-powered platform for evaluating loan applications and providing explainable risk predictions.
 
-✅ SHAP Explainability
+**Key Features**
 
-✅ Dashboard Analytics
-
-✅ Firebase Authentication
+* 🤖 Loan Risk Prediction
+* 📊 Dashboard Analytics
+* 🔍 SHAP Explainability
+* 🔐 Firebase Authentication
+* 📈 ML-Based Decision Support
 
 ---
 
 ### 🤖 AI Finance Chatbot
 
-✅ LangFlow
+**AI-powered financial information assistant**
 
-✅ NLP
+**Technology**
 
-✅ Financial Insights
-
-✅ Real Time Market Information
+* LangFlow
+* NLP
+* AI
+* Financial Data
+* Real-Time Information
+* Conversational Interface
 
 ---
 
 ### 🎤 Voice Controlled AI Assistant
 
-✅ Speech Recognition
+**Python-based voice automation assistant**
 
-✅ Voice Commands
+**Features**
 
-✅ Python Automation
+* 🎙️ Speech Recognition
+* 🗣️ Voice Commands
+* ⚙️ Python Automation
+* 💻 System Interaction
 
 ---
 
-# ⚡ Current Learning
+## 📚 Currently Learning
 
 <details>
+<summary><b>☁️ DevOps & Cloud</b></summary>
 
-<summary>Click Here</summary>
+<br>
 
-### DevOps
+* Docker
+* Kubernetes
+* Jenkins
+* Terraform
+* AWS
+* CI/CD
+* Linux
+* Cloud Deployment
 
-- Docker
+</details>
 
-- Kubernetes
+<details>
+<summary><b>🤖 Machine Learning & AI</b></summary>
 
-- Jenkins
+<br>
 
-- Terraform
+* Scikit-learn
+* NLP
+* Random Forest
+* XGBoost
+* SHAP
+* Deep Learning
+* AI Application Development
 
-- AWS
+</details>
 
-### Machine Learning
+<details>
+<summary><b>💻 Web Development</b></summary>
 
-- Scikit Learn
+<br>
 
-- NLP
-
-- Random Forest
-
-- XGBoost
-
-- Deep Learning
-
-### Frontend
-
-- React
-
-- Tailwind
-
-- Next.js
+* React
+* JavaScript
+* TypeScript
+* Tailwind CSS
+* Next.js
+* Flask
+* Spring Boot
 
 </details>
 
 ---
 
-# 🐍 Contribution Snake
+## 📊 GitHub Analytics
 
-![Snake Animation](https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg)
-
----
-
-# ✍️ Random Dev Quote
-
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+<p align="center">
+  <img height="180" src="https://github-readme-stats.vercel.app/api?username=pranav2329h&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" />
+  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=pranav2329h&layout=compact&theme=tokyonight&hide_border=true" />
+</p>
 
 ---
 
-# 👀 Visitor Count
+## 🔥 GitHub Streak
 
-![](https://komarev.com/ghpvc/?username=pranav2329h&color=brightgreen)
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=pranav2329h&theme=tokyonight&hide_border=true" />
+</p>
+
+---
+
+## 📈 Contribution Activity
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=pranav2329h&theme=react-dark&hide_border=true" />
+</p>
+
+---
+
+## 🏆 GitHub Trophies
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=pranav2329h&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=7" />
+</p>
+
+---
+
+## 🐍 Contribution Snake
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg" />
+</p>
+
+---
+
+## 🌐 Connect With Me
+
+<p align="center">
+
+<a href="https://github.com/pranav2329h">
+<img src="https://skillicons.dev/icons?i=github" width="45"/>
+</a>
+
+<a href="https://linkedin.com/in/YOUR-LINKEDIN">
+<img src="https://skillicons.dev/icons?i=linkedin" width="45"/>
+</a>
+
+<a href="mailto:pranav2329h@gmail.com">
+<img src="https://skillicons.dev/icons?i=gmail" width="45"/>
+</a>
+
+</p>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=pranav2329h&label=Profile%20Views&color=00F5A0&style=flat" />
+</p>
 
 ---
 
 <h3 align="center">
-
-⭐ Thanks for visiting my profile ⭐
-
+  Building • Learning • Deploying • Improving
 </h3>
+
+<p align="center">
+  ⭐ Thanks for visiting my profile!
+</p>
