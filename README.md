@@ -33,7 +33,7 @@ I'm a **Computer Science & AI Graduate** interested in building practical applic
 - ⚙️ Exploring **DevOps, Cloud & CI/CD**
 - 🧠 Interested in solving real-world problems using technology
 - 📫 Email: **pranav2329h@gmail.com**
-- 🌐 Portfolio: **https://new-portfolio-five-rosy.vercel.app/**
+- 🌐 Portfolio: **https://pranav-hydrabade.vercel.app/**
 
 ---
 
