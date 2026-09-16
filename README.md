@@ -8,7 +8,7 @@
   <a href="https://github.com/pranav2329h">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
   </a>
-  <a href="https://new-portfolio-five-rosy.vercel.app/">
+  <a href="https://pranav-hydrabade.vercel.app/">
     <img src="https://img.shields.io/badge/Portfolio-00F5A0?style=for-the-badge&logo=vercel&logoColor=black" />
   </a>
   <a href="mailto:pranav2329h@gmail.com">
