@@ -8,7 +8,7 @@
 <rect class="cell" x="38" y="40" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.012s"><title>2025-11-03: contribution level 0</title></rect>
 <rect class="cell" x="38" y="54" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.024s"><title>2025-11-04: contribution level 0</title></rect>
 <rect class="cell" x="38" y="68" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.036s"><title>2025-11-05: contribution level 0</title></rect>
-<rect class="cell" x="38" y="82" width="11" height="11" rx="2" fill="#006d32" style="animation-delay:0.048s"><title>2025-11-06: contribution level 2</title></rect>
+<rect class="cell" x="38" y="82" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.048s"><title>2025-11-06: contribution level 1</title></rect>
 <rect class="cell" x="38" y="96" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.060s"><title>2025-11-07: contribution level 1</title></rect>
 <rect class="cell" x="38" y="110" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.072s"><title>2025-11-08: contribution level 0</title></rect>
 <rect class="cell" x="52" y="26" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.012s"><title>2025-11-09: contribution level 0</title></rect>
@@ -16,7 +16,7 @@
 <rect class="cell" x="52" y="54" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.036s"><title>2025-11-11: contribution level 0</title></rect>
 <rect class="cell" x="52" y="68" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.048s"><title>2025-11-12: contribution level 0</title></rect>
 <rect class="cell" x="52" y="82" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.060s"><title>2025-11-13: contribution level 0</title></rect>
-<rect class="cell" x="52" y="96" width="11" height="11" rx="2" fill="#006d32" style="animation-delay:0.072s"><title>2025-11-14: contribution level 2</title></rect>
+<rect class="cell" x="52" y="96" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.072s"><title>2025-11-14: contribution level 1</title></rect>
 <rect class="cell" x="52" y="110" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.084s"><title>2025-11-15: contribution level 0</title></rect>
 <rect class="cell" x="66" y="26" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.024s"><title>2025-11-16: contribution level 0</title></rect>
 <rect class="cell" x="66" y="40" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.036s"><title>2025-11-17: contribution level 0</title></rect>
@@ -25,9 +25,9 @@
 <rect class="cell" x="66" y="82" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.072s"><title>2025-11-20: contribution level 0</title></rect>
 <rect class="cell" x="66" y="96" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.084s"><title>2025-11-21: contribution level 1</title></rect>
 <rect class="cell" x="66" y="110" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.096s"><title>2025-11-22: contribution level 0</title></rect>
-<rect class="cell" x="80" y="26" width="11" height="11" rx="2" fill="#006d32" style="animation-delay:0.036s"><title>2025-11-23: contribution level 2</title></rect>
-<rect class="cell" x="80" y="40" width="11" height="11" rx="2" fill="#006d32" style="animation-delay:0.048s"><title>2025-11-24: contribution level 2</title></rect>
-<rect class="cell" x="80" y="54" width="11" height="11" rx="2" fill="#006d32" style="animation-delay:0.060s"><title>2025-11-25: contribution level 2</title></rect>
+<rect class="cell" x="80" y="26" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.036s"><title>2025-11-23: contribution level 1</title></rect>
+<rect class="cell" x="80" y="40" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.048s"><title>2025-11-24: contribution level 1</title></rect>
+<rect class="cell" x="80" y="54" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.060s"><title>2025-11-25: contribution level 1</title></rect>
 <rect class="cell" x="80" y="68" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.072s"><title>2025-11-26: contribution level 0</title></rect>
 <rect class="cell" x="80" y="82" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.084s"><title>2025-11-27: contribution level 1</title></rect>
 <rect class="cell" x="80" y="96" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.096s"><title>2025-11-28: contribution level 0</title></rect>
@@ -106,7 +106,7 @@
 <rect class="cell" x="234" y="40" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.180s"><title>2026-02-09: contribution level 1</title></rect>
 <rect class="cell" x="234" y="54" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.192s"><title>2026-02-10: contribution level 1</title></rect>
 <rect class="cell" x="234" y="68" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.204s"><title>2026-02-11: contribution level 0</title></rect>
-<rect class="cell" x="234" y="82" width="11" height="11" rx="2" fill="#006d32" style="animation-delay:0.216s"><title>2026-02-12: contribution level 2</title></rect>
+<rect class="cell" x="234" y="82" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.216s"><title>2026-02-12: contribution level 1</title></rect>
 <rect class="cell" x="234" y="96" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.228s"><title>2026-02-13: contribution level 1</title></rect>
 <rect class="cell" x="234" y="110" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.240s"><title>2026-02-14: contribution level 1</title></rect>
 <rect class="cell" x="248" y="26" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.180s"><title>2026-02-15: contribution level 1</title></rect>
@@ -126,7 +126,7 @@
 <rect class="cell" x="276" y="26" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.204s"><title>2026-03-01: contribution level 0</title></rect>
 <rect class="cell" x="276" y="40" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.216s"><title>2026-03-02: contribution level 1</title></rect>
 <rect class="cell" x="276" y="54" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.228s"><title>2026-03-03: contribution level 0</title></rect>
-<rect class="cell" x="276" y="68" width="11" height="11" rx="2" fill="#006d32" style="animation-delay:0.240s"><title>2026-03-04: contribution level 2</title></rect>
+<rect class="cell" x="276" y="68" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.240s"><title>2026-03-04: contribution level 1</title></rect>
 <rect class="cell" x="276" y="82" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.252s"><title>2026-03-05: contribution level 0</title></rect>
 <rect class="cell" x="276" y="96" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.264s"><title>2026-03-06: contribution level 0</title></rect>
 <rect class="cell" x="276" y="110" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.276s"><title>2026-03-07: contribution level 1</title></rect>
@@ -148,8 +148,8 @@
 <rect class="cell" x="318" y="40" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.252s"><title>2026-03-23: contribution level 0</title></rect>
 <rect class="cell" x="318" y="54" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.264s"><title>2026-03-24: contribution level 0</title></rect>
 <rect class="cell" x="318" y="68" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.276s"><title>2026-03-25: contribution level 1</title></rect>
-<rect class="cell" x="318" y="82" width="11" height="11" rx="2" fill="#26a641" style="animation-delay:0.288s"><title>2026-03-26: contribution level 3</title></rect>
-<rect class="cell" x="318" y="96" width="11" height="11" rx="2" fill="#006d32" style="animation-delay:0.300s"><title>2026-03-27: contribution level 2</title></rect>
+<rect class="cell" x="318" y="82" width="11" height="11" rx="2" fill="#006d32" style="animation-delay:0.288s"><title>2026-03-26: contribution level 2</title></rect>
+<rect class="cell" x="318" y="96" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.300s"><title>2026-03-27: contribution level 1</title></rect>
 <rect class="cell" x="318" y="110" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.312s"><title>2026-03-28: contribution level 0</title></rect>
 <rect class="cell" x="332" y="26" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.252s"><title>2026-03-29: contribution level 0</title></rect>
 <rect class="cell" x="332" y="40" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.264s"><title>2026-03-30: contribution level 0</title></rect>
@@ -202,7 +202,7 @@
 <rect class="cell" x="416" y="110" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.396s"><title>2026-05-16: contribution level 0</title></rect>
 <rect class="cell" x="430" y="26" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.336s"><title>2026-05-17: contribution level 0</title></rect>
 <rect class="cell" x="430" y="40" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.348s"><title>2026-05-18: contribution level 0</title></rect>
-<rect class="cell" x="430" y="54" width="11" height="11" rx="2" fill="#006d32" style="animation-delay:0.360s"><title>2026-05-19: contribution level 2</title></rect>
+<rect class="cell" x="430" y="54" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.360s"><title>2026-05-19: contribution level 1</title></rect>
 <rect class="cell" x="430" y="68" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.372s"><title>2026-05-20: contribution level 0</title></rect>
 <rect class="cell" x="430" y="82" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.384s"><title>2026-05-21: contribution level 0</title></rect>
 <rect class="cell" x="430" y="96" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.396s"><title>2026-05-22: contribution level 0</title></rect>
@@ -241,8 +241,8 @@
 <rect class="cell" x="500" y="68" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.432s"><title>2026-06-24: contribution level 0</title></rect>
 <rect class="cell" x="500" y="82" width="11" height="11" rx="2" fill="#006d32" style="animation-delay:0.444s"><title>2026-06-25: contribution level 2</title></rect>
 <rect class="cell" x="500" y="96" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.456s"><title>2026-06-26: contribution level 0</title></rect>
-<rect class="cell" x="500" y="110" width="11" height="11" rx="2" fill="#39d353" style="animation-delay:0.468s"><title>2026-06-27: contribution level 4</title></rect>
-<rect class="cell" x="514" y="26" width="11" height="11" rx="2" fill="#006d32" style="animation-delay:0.408s"><title>2026-06-28: contribution level 2</title></rect>
+<rect class="cell" x="500" y="110" width="11" height="11" rx="2" fill="#26a641" style="animation-delay:0.468s"><title>2026-06-27: contribution level 3</title></rect>
+<rect class="cell" x="514" y="26" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.408s"><title>2026-06-28: contribution level 1</title></rect>
 <rect class="cell" x="514" y="40" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.420s"><title>2026-06-29: contribution level 1</title></rect>
 <rect class="cell" x="514" y="54" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.432s"><title>2026-06-30: contribution level 1</title></rect>
 <rect class="cell" x="514" y="68" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.444s"><title>2026-07-01: contribution level 1</title></rect>
@@ -294,13 +294,13 @@
 <rect class="cell" x="612" y="26" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.492s"><title>2026-08-16: contribution level 0</title></rect>
 <rect class="cell" x="612" y="40" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.504s"><title>2026-08-17: contribution level 0</title></rect>
 <rect class="cell" x="612" y="54" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.516s"><title>2026-08-18: contribution level 0</title></rect>
-<rect class="cell" x="612" y="68" width="11" height="11" rx="2" fill="#006d32" style="animation-delay:0.528s"><title>2026-08-19: contribution level 2</title></rect>
+<rect class="cell" x="612" y="68" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.528s"><title>2026-08-19: contribution level 1</title></rect>
 <rect class="cell" x="612" y="82" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.540s"><title>2026-08-20: contribution level 1</title></rect>
 <rect class="cell" x="612" y="96" width="11" height="11" rx="2" fill="#006d32" style="animation-delay:0.552s"><title>2026-08-21: contribution level 2</title></rect>
 <rect class="cell" x="612" y="110" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.564s"><title>2026-08-22: contribution level 1</title></rect>
 <rect class="cell" x="626" y="26" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.504s"><title>2026-08-23: contribution level 0</title></rect>
 <rect class="cell" x="626" y="40" width="11" height="11" rx="2" fill="#006d32" style="animation-delay:0.516s"><title>2026-08-24: contribution level 2</title></rect>
-<rect class="cell" x="626" y="54" width="11" height="11" rx="2" fill="#26a641" style="animation-delay:0.528s"><title>2026-08-25: contribution level 3</title></rect>
+<rect class="cell" x="626" y="54" width="11" height="11" rx="2" fill="#006d32" style="animation-delay:0.528s"><title>2026-08-25: contribution level 2</title></rect>
 <rect class="cell" x="626" y="68" width="11" height="11" rx="2" fill="#006d32" style="animation-delay:0.540s"><title>2026-08-26: contribution level 2</title></rect>
 <rect class="cell" x="626" y="82" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.552s"><title>2026-08-27: contribution level 1</title></rect>
 <rect class="cell" x="626" y="96" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.564s"><title>2026-08-28: contribution level 0</title></rect>
@@ -325,7 +325,7 @@
 <rect class="cell" x="668" y="68" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.576s"><title>2026-09-16: contribution level 1</title></rect>
 <rect class="cell" x="668" y="82" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.588s"><title>2026-09-17: contribution level 1</title></rect>
 <rect class="cell" x="668" y="96" width="11" height="11" rx="2" fill="#006d32" style="animation-delay:0.600s"><title>2026-09-18: contribution level 2</title></rect>
-<rect class="cell" x="668" y="110" width="11" height="11" rx="2" fill="#26a641" style="animation-delay:0.612s"><title>2026-09-19: contribution level 3</title></rect>
+<rect class="cell" x="668" y="110" width="11" height="11" rx="2" fill="#006d32" style="animation-delay:0.612s"><title>2026-09-19: contribution level 2</title></rect>
 <rect class="cell" x="682" y="26" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.552s"><title>2026-09-20: contribution level 0</title></rect>
 <rect class="cell" x="682" y="40" width="11" height="11" rx="2" fill="#006d32" style="animation-delay:0.564s"><title>2026-09-21: contribution level 2</title></rect>
 <rect class="cell" x="682" y="54" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.576s"><title>2026-09-22: contribution level 1</title></rect>
@@ -335,7 +335,7 @@
 <rect class="cell" x="682" y="110" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.624s"><title>2026-09-26: contribution level 1</title></rect>
 <rect class="cell" x="696" y="26" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.564s"><title>2026-09-27: contribution level 0</title></rect>
 <rect class="cell" x="696" y="40" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.576s"><title>2026-09-28: contribution level 0</title></rect>
-<rect class="cell" x="696" y="54" width="11" height="11" rx="2" fill="#006d32" style="animation-delay:0.588s"><title>2026-09-29: contribution level 2</title></rect>
+<rect class="cell" x="696" y="54" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.588s"><title>2026-09-29: contribution level 1</title></rect>
 <rect class="cell" x="696" y="68" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.600s"><title>2026-09-30: contribution level 1</title></rect>
 <rect class="cell" x="696" y="82" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.612s"><title>2026-10-01: contribution level 1</title></rect>
 <rect class="cell" x="696" y="96" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.624s"><title>2026-10-02: contribution level 1</title></rect>
@@ -352,7 +352,7 @@
 <rect class="cell" x="724" y="54" width="11" height="11" rx="2" fill="#006d32" style="animation-delay:0.612s"><title>2026-10-13: contribution level 2</title></rect>
 <rect class="cell" x="724" y="68" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.624s"><title>2026-10-14: contribution level 1</title></rect>
 <rect class="cell" x="724" y="82" width="11" height="11" rx="2" fill="#006d32" style="animation-delay:0.636s"><title>2026-10-15: contribution level 2</title></rect>
-<rect class="cell" x="724" y="96" width="11" height="11" rx="2" fill="#006d32" style="animation-delay:0.648s"><title>2026-10-16: contribution level 2</title></rect>
+<rect class="cell" x="724" y="96" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.648s"><title>2026-10-16: contribution level 1</title></rect>
 <rect class="cell" x="724" y="110" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.660s"><title>2026-10-17: contribution level 1</title></rect>
 <rect class="cell" x="738" y="26" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.600s"><title>2026-10-18: contribution level 0</title></rect>
 <rect class="cell" x="738" y="40" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.612s"><title>2026-10-19: contribution level 1</title></rect>
@@ -366,11 +366,11 @@
 <rect class="cell" x="752" y="54" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.636s"><title>2026-10-27: contribution level 1</title></rect>
 <rect class="cell" x="752" y="68" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.648s"><title>2026-10-28: contribution level 0</title></rect>
 <rect class="cell" x="752" y="82" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.660s"><title>2026-10-29: contribution level 1</title></rect>
-<rect class="cell" x="752" y="96" width="11" height="11" rx="2" fill="#26a641" style="animation-delay:0.672s"><title>2026-10-30: contribution level 3</title></rect>
+<rect class="cell" x="752" y="96" width="11" height="11" rx="2" fill="#006d32" style="animation-delay:0.672s"><title>2026-10-30: contribution level 2</title></rect>
 <rect class="cell" x="752" y="110" width="11" height="11" rx="2" fill="#006d32" style="animation-delay:0.684s"><title>2026-10-31: contribution level 2</title></rect>
 <rect class="cell" x="766" y="26" width="11" height="11" rx="2" fill="#0e4429" style="animation-delay:0.624s"><title>2026-11-01: contribution level 1</title></rect>
 <rect class="cell" x="766" y="40" width="11" height="11" rx="2" fill="#39d353" style="animation-delay:0.636s"><title>2026-11-02: contribution level 4</title></rect>
-<rect class="cell" x="766" y="54" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.648s"><title>2026-11-03: contribution level 0</title></rect>
+<rect class="cell" x="766" y="54" width="11" height="11" rx="2" fill="#39d353" style="animation-delay:0.648s"><title>2026-11-03: contribution level 4</title></rect>
 <rect class="cell" x="766" y="68" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.660s"><title>2026-11-04: contribution level 0</title></rect>
 <rect class="cell" x="766" y="82" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.672s"><title>2026-11-05: contribution level 0</title></rect>
 <rect class="cell" x="766" y="96" width="11" height="11" rx="2" fill="#161b22" style="animation-delay:0.684s"><title>2026-11-06: contribution level 0</title></rect>
@@ -382,5 +382,5 @@
 <rect x="110" y="139" width="11" height="11" rx="2" fill="#26a641"/>
 <rect x="124" y="139" width="11" height="11" rx="2" fill="#39d353"/>
 <text x="141" y="148">More</text>
-<text x="780" y="148" text-anchor="end">110 active days in calendar</text>
+<text x="780" y="148" text-anchor="end">111 active days in calendar</text>
 </svg>
