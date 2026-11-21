@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="386" viewBox="0 0 1200 386" role="img" aria-label="445 contributions in the last year"><title>445 contributions in the last year</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="386" viewBox="0 0 1200 386" role="img" aria-label="451 contributions in the last year"><title>451 contributions in the last year</title>
 <defs>
 <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0" spreadMethod="repeat"><stop offset="0" stop-color="#0891B2"/><stop offset="0.33" stop-color="#7C3AED"/><stop offset="0.66" stop-color="#DB2777"/><stop offset="1" stop-color="#0891B2"/><animateTransform attributeName="gradientTransform" type="translate" values="0 0;1 0" dur="6s" repeatCount="indefinite"/></linearGradient>
 <linearGradient id="scan" x1="0" x2="1"><stop offset="0" stop-color="#0891B2" stop-opacity="0"/><stop offset="0.5" stop-color="#0891B2" stop-opacity="0.28"/><stop offset="1" stop-color="#0891B2" stop-opacity="0"/></linearGradient>
@@ -19,7 +19,7 @@ text{font-family:'SF Mono', 'JetBrains Mono', 'Cascadia Code', Consolas, 'Libera
 @keyframes up{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}.up{animation:up .8s ease-out both}
 </style>
 <rect x="0.5" y="0.5" width="1199" height="385" rx="16" fill="#FFFFFF" stroke="#D0D7DE"/>
-<g class="up" style="animation-delay:0.00s"><text class="lbl" x="152.0" y="50" text-anchor="middle">CONTRIBUTIONS</text><text class="val" x="152.0" y="100" text-anchor="middle" fill="url(#neon)">445</text><text class="unit" x="152.0" y="126" text-anchor="middle">last 12 months</text></g>
+<g class="up" style="animation-delay:0.00s"><text class="lbl" x="152.0" y="50" text-anchor="middle">CONTRIBUTIONS</text><text class="val" x="152.0" y="100" text-anchor="middle" fill="url(#neon)">451</text><text class="unit" x="152.0" y="126" text-anchor="middle">last 12 months</text></g>
 <g class="up" style="animation-delay:0.12s"><text class="lbl" x="376.0" y="50" text-anchor="middle">ACTIVE DAYS</text><text class="val" x="376.0" y="100" text-anchor="middle" fill="url(#neon)">126</text><text class="unit" x="376.0" y="126" text-anchor="middle">of 371</text></g>
 <line x1="264.0" y1="36" x2="264.0" y2="126" stroke="#D0D7DE"/>
 <g class="up" style="animation-delay:0.24s"><text class="lbl" x="600.0" y="50" text-anchor="middle">CURRENT STREAK</text><text class="val" x="600.0" y="100" text-anchor="middle" fill="url(#neon)">24</text><text class="unit" x="600.0" y="126" text-anchor="middle">days</text></g>
@@ -414,7 +414,7 @@ text{font-family:'SF Mono', 'JetBrains Mono', 'Cascadia Code', Consolas, 'Libera
 <rect class="c" x="1130.0" y="236" width="16" height="16" rx="4" fill="#A5F3FC" style="animation-delay:0.770s"/>
 <rect class="c" x="1130.0" y="256" width="16" height="16" rx="4" fill="#A5F3FC" style="animation-delay:0.784s"/>
 <rect class="c" x="1130.0" y="276" width="16" height="16" rx="4" fill="#22D3EE" style="animation-delay:0.798s"/>
-<rect class="c" x="1130.0" y="296" width="16" height="16" rx="4" fill="#22D3EE" style="animation-delay:0.812s"/>
+<rect class="c hot" x="1130.0" y="296" width="16" height="16" rx="4" fill="#155E75" filter="url(#glow)" style="animation-delay:0.812s"/>
 <g clip-path="url(#gridClip)"><rect class="scan" x="-70.0" y="176" width="120" height="136" fill="url(#scan)"/></g>
 <text class="axis" x="90.0" y="352">Less</text>
 <rect x="132.0" y="340" width="14" height="14" rx="3" fill="#EBEDF0"/>
