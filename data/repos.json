@@ -1,7 +1,37 @@
 {
-  "CloudVault": {"stars": 0, "forks": 0, "language": "JavaScript", "pushed_at": "2026-09-10T13:13:52Z", "homepage": null},
-  "loan-approval-ui": {"stars": 0, "forks": 0, "language": "JavaScript", "pushed_at": "2026-03-16T11:14:50Z", "homepage": null},
-  "jenkins-auto-rollback": {"stars": 0, "forks": 0, "language": "Shell", "pushed_at": "2026-10-30T09:49:47Z", "homepage": null},
-  "SalesPulse-AI-Retail-analytics-recommendations": {"stars": 0, "forks": 0, "language": "Python", "pushed_at": "2026-03-27T13:04:59Z", "homepage": null},
-  "TensorTonic-Solutions": {"stars": 0, "forks": 0, "language": "Python", "pushed_at": "2026-10-27T13:18:44Z", "homepage": null}
+  "CloudVault": {
+    "stars": 0,
+    "forks": 0,
+    "language": "JavaScript",
+    "pushed_at": "2026-09-10T13:13:52Z",
+    "homepage": null
+  },
+  "loan-approval-ui": {
+    "stars": 0,
+    "forks": 0,
+    "language": "JavaScript",
+    "pushed_at": "2026-03-16T11:14:50Z",
+    "homepage": "https://loan-approval-ui.vercel.app"
+  },
+  "jenkins-auto-rollback": {
+    "stars": 0,
+    "forks": 0,
+    "language": "Shell",
+    "pushed_at": "2026-10-30T09:49:47Z",
+    "homepage": null
+  },
+  "SalesPulse-AI-Retail-analytics-recommendations": {
+    "stars": 0,
+    "forks": 0,
+    "language": "Python",
+    "pushed_at": "2026-03-27T13:04:59Z",
+    "homepage": null
+  },
+  "TensorTonic-Solutions": {
+    "stars": 0,
+    "forks": 0,
+    "language": "Python",
+    "pushed_at": "2026-10-27T13:18:44Z",
+    "homepage": null
+  }
 }
