@@ -1,0 +1,75 @@
+{
+  "name": "Pranav Hydrabade",
+  "handle": "pranav2329h",
+  "headline": "Computer Science & AI Engineer",
+  "location": "Pune, India",
+  "since": "2023",
+  "eyebrow": "FULL STACK  ·  ARTIFICIAL INTELLIGENCE  ·  CLOUD & DEVOPS",
+  "info": [
+    ["ROLE", "Full Stack & AI Engineer"],
+    ["DEGREE", "Computer Science & Artificial Intelligence"],
+    ["BASE", "Pune, India"],
+    ["FOCUS", "AI / ML  ·  DevOps  ·  Cloud"],
+    ["STACK", "Python  ·  React  ·  Flask  ·  Django"],
+    ["DATA", "MongoDB  ·  MySQL  ·  Firebase"],
+    ["CLOUD", "AWS  ·  Docker  ·  Terraform  ·  Jenkins"],
+    ["LEARNING", "Kubernetes  ·  MLOps"]
+  ],
+  "projects": [
+    {
+      "slug": "cloudvault",
+      "title": "CloudVault Pro",
+      "kind": "FULL STACK  ·  CLOUD",
+      "tagline": "Secure cloud storage & collaboration",
+      "description": "Multi-tenant file vault with JWT security, S3 storage, public link sharing and a Dockerised Nginx stack shipped by Jenkins.",
+      "stack": ["React", "Flask", "MongoDB", "AWS S3", "Docker", "Jenkins"],
+      "repo": "CloudVault"
+    },
+    {
+      "slug": "credisure",
+      "title": "Credisure",
+      "kind": "MACHINE LEARNING  ·  XAI",
+      "tagline": "Explainable loan approval",
+      "description": "Scikit-learn risk engine that explains every decision with SHAP, wrapped in an animated React dashboard with Firebase auth.",
+      "stack": ["Python", "Scikit-learn", "SHAP", "React", "Firebase"],
+      "repo": "loan-approval-ui"
+    },
+    {
+      "slug": "auto-rollback",
+      "title": "Jenkins Auto-Rollback",
+      "kind": "DEVOPS  ·  CI/CD",
+      "tagline": "Self-healing deployments",
+      "description": "Builds and pushes tagged Docker images, deploys to EC2, health-checks the release and restores the last good image on failure.",
+      "stack": ["Jenkins", "Docker", "AWS EC2", "Bash", "Python"],
+      "repo": "jenkins-auto-rollback"
+    },
+    {
+      "slug": "vayucast",
+      "title": "VayuCast",
+      "kind": "AI  ·  ENVIRONMENT",
+      "tagline": "Pollution hotspot prediction",
+      "description": "Predicts AQI hotspots from traffic and wind dynamics, then maps human exposure to support cleaner-air decisions.",
+      "stack": ["Python", "Machine Learning", "Geospatial", "Data Viz"],
+      "repo": null,
+      "status": "IN DEVELOPMENT"
+    },
+    {
+      "slug": "salespulse",
+      "title": "SalesPulse AI",
+      "kind": "FULL STACK  ·  ANALYTICS",
+      "tagline": "Retail analytics dashboard",
+      "description": "Revenue, category and top-SKU insights with live inventory and product management, on an animated glass dashboard.",
+      "stack": ["React", "Express", "Prisma", "MySQL", "Chart.js"],
+      "repo": "SalesPulse-AI-Retail-analytics-recommendations"
+    },
+    {
+      "slug": "tensortonic",
+      "title": "TensorTonic Solutions",
+      "kind": "ML  ·  FUNDAMENTALS",
+      "tagline": "ML algorithms from scratch",
+      "description": "Verified from-scratch implementations of core machine-learning and deep-learning algorithms, auto-synced from TensorTonic.",
+      "stack": ["Python", "NumPy", "Deep Learning", "Algorithms"],
+      "repo": "TensorTonic-Solutions"
+    }
+  ]
+}

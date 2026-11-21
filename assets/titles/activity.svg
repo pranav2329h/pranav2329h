@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="120" viewBox="0 0 1200 120" role="img" aria-label="Contribution Matrix"><title>Contribution Matrix</title>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0" spreadMethod="reflect"><stop offset="0" stop-color="#8C6A1F"/><stop offset="0.35" stop-color="#D4AF37"/><stop offset="0.5" stop-color="#F3D98B"/><stop offset="0.65" stop-color="#D4AF37"/><stop offset="1" stop-color="#8C6A1F"/><animateTransform attributeName="gradientTransform" type="translate" values="-1 0;1 0;-1 0" dur="9s" repeatCount="indefinite"/></linearGradient><linearGradient id="fadeL" x1="0" x2="1"><stop offset="0" stop-color="#D4AF37" stop-opacity="0"/><stop offset="1" stop-color="#D4AF37"/></linearGradient><linearGradient id="fadeR" x1="0" x2="1"><stop offset="0" stop-color="#D4AF37"/><stop offset="1" stop-color="#D4AF37" stop-opacity="0"/></linearGradient></defs>
+<style>
+.n{font:600 13px 'SF Mono', 'JetBrains Mono', 'Cascadia Code', Consolas, 'Liberation Mono', monospace;letter-spacing:6px;fill:#D4AF37}
+.t{font:400 44px Didot, 'Bodoni 72', 'Bodoni MT', 'Playfair Display', 'Cormorant Garamond', Georgia, 'Times New Roman', serif;letter-spacing:3px;fill:url(#g)}
+</style>
+<text class="n" x="600.0" y="26" text-anchor="middle">04  —  ACTIVITY</text>
+<text class="t" x="600.0" y="82" text-anchor="middle">Contribution Matrix</text>
+<g class=""><line x1="430.0" y1="106" x2="586.0" y2="106" stroke="url(#fadeL)" stroke-width="1.2"/><line x1="614.0" y1="106" x2="770.0" y2="106" stroke="url(#fadeR)" stroke-width="1.2"/><path d="M600.0 100 L606.0 106 L600.0 112 L594.0 106 Z" fill="#D4AF37"/><path d="M600.0 95 L611.0 106 L600.0 117 L589.0 106 Z" fill="none" stroke="#D4AF37" stroke-opacity="0.5"/></g>
+</svg>

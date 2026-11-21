@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Prepare a portrait for ASCII conversion. Usage: python scripts/prep_photo.py photo.jpg"""
+"""Optional: prepare a portrait for ASCII conversion.
+
+    pip install -r scripts/requirements-portrait.txt
+    python scripts/prep_photo.py photo.jpg   # -> source-prepped.png (git-ignored)
+"""
 import sys
 from pathlib import Path
 import cv2
@@ -10,7 +14,7 @@ def main():
     if len(sys.argv) != 2:
         raise SystemExit("Usage: python scripts/prep_photo.py source-photo.jpg")
     src = Path(sys.argv[1])
-    out = Path("source-prepped.png")
+    out = Path(__file__).resolve().parent.parent / "source-prepped.png"
     image = Image.open(src).convert("RGBA")
 
     # Optional background removal. If rembg is unavailable, continue with the original image.

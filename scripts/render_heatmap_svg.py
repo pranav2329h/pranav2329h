@@ -1,74 +1,127 @@
 #!/usr/bin/env python3
-"""Render data/contributions.json as an animated GitHub-style SVG heatmap."""
-import json
-from pathlib import Path
-from datetime import date
+"""Render data/contributions.json as an animated gold contribution matrix."""
+from datetime import date, timedelta
 
-DATA = Path("data/contributions.json")
-OUT = Path("contrib-heatmap.svg")
-COLORS = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
-CELL = 11
-GAP = 3
-LEFT, TOP = 38, 26
-WEEKS = 53
-DAYS = 7
+from contrib_stats import compute_stats
+from theme import (BG, GOLD, GOLD_LIGHT, HEAT, LINE, MONO, MUTED, SERIF,
+                   esc, gold_gradient, load_json, svg_open, write_svg)
+
+W = 1200
+CELL, GAP = 16, 4
+STEP = CELL + GAP
+GRID_TOP = 170
+MONTHS = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split()
+
 
 def main():
-    if not DATA.exists():
+    payload = load_json("contributions.json")
+    if not payload or not payload.get("days"):
         raise SystemExit("Missing data/contributions.json. Run fetch_contributions.py first.")
-    payload = json.loads(DATA.read_text(encoding="utf-8"))
-    by_date = {x["date"]: int(x["level"]) for x in payload["days"]}
-    dates = sorted(by_date)
-    if not dates:
-        raise SystemExit("Contribution data is empty.")
+    stats = compute_stats(payload)
+    levels = {d["date"]: int(d["level"]) for d in payload["days"]}
+    counts = {d["date"]: d.get("count") for d in payload["days"]}
 
-    # Anchor the 53 columns to the latest Sunday-based week in fetched data.
-    latest = date.fromisoformat(dates[-1])
-    start = latest
-    while start.weekday() != 6:  # Sunday
-        from datetime import timedelta
-        start -= timedelta(days=1)
-    start -= __import__("datetime").timedelta(weeks=52)
+    first = date.fromisoformat(stats["first"])
+    last = date.fromisoformat(stats["last"])
+    start = first - timedelta(days=(first.weekday() + 1) % 7)  # back to Sunday
+    weeks = (last - start).days // 7 + 1
 
-    width = LEFT + WEEKS * (CELL + GAP) + 12
-    height = TOP + DAYS * (CELL + GAP) + 42
-    total = sum(1 for v in by_date.values() if v > 0)
-    svg = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" role="img">',
-        '<rect width="100%" height="100%" rx="10" fill="#020617"/>',
-        '<style>text{font-family:Arial,sans-serif;fill:#8b949e;font-size:10px}.cell{opacity:0.15;animation:reveal .55s ease forwards}@keyframes reveal{to{opacity:1}}</style>',
+    grid_w = weeks * STEP - GAP
+    left = (W - grid_w) / 2 + 18
+    grid_h = 7 * STEP - GAP
+    H = GRID_TOP + grid_h + 74
+
+    out = [
+        svg_open(W, H, f"{stats['total']} contributions in the last year"),
+        "<defs>",
+        gold_gradient("gold", shimmer=True, dur="9s"),
+        f'<linearGradient id="scan" x1="0" x2="1"><stop offset="0" stop-color="{GOLD_LIGHT}" stop-opacity="0"/>'
+        f'<stop offset="0.5" stop-color="{GOLD_LIGHT}" stop-opacity="0.22"/>'
+        f'<stop offset="1" stop-color="{GOLD_LIGHT}" stop-opacity="0"/></linearGradient>',
+        '<filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="2.4" result="b"/>'
+        '<feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>',
+        f'<clipPath id="gridClip"><rect x="{left}" y="{GRID_TOP}" width="{grid_w}" height="{grid_h}"/></clipPath>',
+        "</defs>",
+        "<style>",
+        f"text{{font-family:{MONO}}}",
+        f".lbl{{font-size:11px;fill:{MUTED};letter-spacing:3px}}",
+        f".val{{font:400 38px {SERIF};fill:url(#gold)}}",
+        f".unit{{font-size:12px;fill:{MUTED}}}",
+        f".axis{{font-size:12px;fill:{MUTED}}}",
+        ".c{animation:reveal .6s ease-out both}",
+        "@keyframes reveal{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:none}}",
+        ".c{transform-box:fill-box;transform-origin:center}",
+        "@keyframes sweep{from{transform:translateX(0)}to{transform:translateX(" + f"{grid_w + 160}" + "px)}}",
+        ".scan{animation:sweep 7s cubic-bezier(.45,0,.55,1) 1.5s infinite}",
+        "</style>",
+        f'<rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="18" fill="{BG}" stroke="{LINE}"/>',
     ]
-    weekdays = ["Mon", "", "Wed", "", "Fri", "", ""]
-    for row, label in enumerate(weekdays):
-        if label:
-            y = TOP + row * (CELL + GAP) + 9
-            svg.append(f'<text x="8" y="{y}">{label}</text>')
 
-    for week in range(WEEKS):
-        for day in range(DAYS):
-            from datetime import timedelta
+    # headline stats band
+    blocks = [
+        ("CONTRIBUTIONS", f"{stats['total']:,}", "last 12 months"),
+        ("ACTIVE DAYS", f"{stats['active_days']}", f"of {payload.get('day_count', len(levels))}"),
+        ("CURRENT STREAK", f"{stats['current']}", "days"),
+        ("LONGEST STREAK", f"{stats['longest']}", "days"),
+        ("BEST DAY", f"{stats['best_count']}", date.fromisoformat(stats["best_date"]).strftime("%b %d, %Y")),
+    ]
+    col = (W - 80) / len(blocks)
+    for i, (label, value, unit) in enumerate(blocks):
+        cx = 40 + col * i + col / 2
+        out.append(f'<text class="lbl" x="{cx}" y="50" text-anchor="middle">{label}</text>')
+        out.append(f'<text class="val" x="{cx}" y="98" text-anchor="middle">{value}</text>')
+        out.append(f'<text class="unit" x="{cx}" y="122" text-anchor="middle">{esc(unit)}</text>')
+        if i:
+            x = 40 + col * i
+            out.append(f'<line x1="{x}" y1="38" x2="{x}" y2="122" stroke="{LINE}"/>')
+
+    # weekday + month axis
+    for row, label in ((1, "Mon"), (3, "Wed"), (5, "Fri")):
+        out.append(f'<text class="axis" x="{left - 12}" y="{GRID_TOP + row * STEP + 12}" text-anchor="end">{label}</text>')
+    prev_month = None
+    for week in range(weeks):
+        sunday = start + timedelta(weeks=week)
+        month = (sunday + timedelta(days=6)).month if week == 0 else sunday.month
+        if month != prev_month and week < weeks - 2:
+            out.append(f'<text class="axis" x="{left + week * STEP}" y="{GRID_TOP - 12}">{MONTHS[month - 1]}</text>')
+        prev_month = month
+
+    # cells
+    for week in range(weeks):
+        for day in range(7):
             current = start + timedelta(days=week * 7 + day)
+            if current < first or current > last:
+                continue
             key = current.isoformat()
-            level = by_date.get(key, 0)
-            x = LEFT + week * (CELL + GAP)
-            y = TOP + day * (CELL + GAP)
-            delay = (week + day) * 0.012
-            svg.append(
-                f'<rect class="cell" x="{x}" y="{y}" width="{CELL}" height="{CELL}" '
-                f'rx="2" fill="{COLORS[level]}" style="animation-delay:{delay:.3f}s">'
-                f'<title>{key}: contribution level {level}</title></rect>'
+            level = levels.get(key, 0)
+            x = left + week * STEP
+            y = GRID_TOP + day * STEP
+            extra = ' filter="url(#glow)"' if level == 4 else ""
+            out.append(
+                f'<rect class="c" x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="3.5" fill="{HEAT[level]}"'
+                f'{extra} style="animation-delay:{(week + day) * 0.014:.3f}s"/>'
             )
 
-    legend_y = height - 18
-    svg.append(f'<text x="{LEFT}" y="{legend_y}">Less</text>')
-    for i, color in enumerate(COLORS):
-        x = LEFT + 30 + i * (CELL + GAP)
-        svg.append(f'<rect x="{x}" y="{legend_y-9}" width="{CELL}" height="{CELL}" rx="2" fill="{color}"/>')
-    svg.append(f'<text x="{LEFT+30+5*(CELL+GAP)+3}" y="{legend_y}">More</text>')
-    svg.append(f'<text x="{width-12}" y="{legend_y}" text-anchor="end">{total} active days in calendar</text>')
-    svg.append("</svg>")
-    OUT.write_text("\n".join(svg), encoding="utf-8")
-    print(f"Wrote {OUT}")
+    # scanning sheen
+    out.append(
+        f'<g clip-path="url(#gridClip)"><rect class="scan" x="{left - 160}" y="{GRID_TOP}" width="120" '
+        f'height="{grid_h}" fill="url(#scan)"/></g>'
+    )
+
+    # legend + footer
+    ly = GRID_TOP + grid_h + 40
+    out.append(f'<text class="axis" x="{left}" y="{ly}">Less</text>')
+    for i, color in enumerate(HEAT):
+        out.append(f'<rect x="{left + 42 + i * STEP}" y="{ly - 12}" width="{CELL - 2}" height="{CELL - 2}" rx="3" fill="{color}"/>')
+    out.append(f'<text class="axis" x="{left + 42 + 5 * STEP + 6}" y="{ly}">More</text>')
+    updated = esc(payload.get("fetched_at", "")[:10])
+    out.append(
+        f'<text class="axis" x="{left + grid_w}" y="{ly}" text-anchor="end">'
+        f'<tspan style="fill:{GOLD}">◆</tspan> auto-refreshed daily · updated {updated}</text>'
+    )
+    out.append("</svg>")
+    write_svg("contrib-heatmap.svg", out)
+
 
 if __name__ == "__main__":
     main()

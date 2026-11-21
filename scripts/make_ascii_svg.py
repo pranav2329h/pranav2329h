@@ -1,51 +1,50 @@
 #!/usr/bin/env python3
-"""Create an animated monochrome ASCII SVG from source-prepped.png."""
-from pathlib import Path
-from PIL import Image
+"""Optional: turn source-prepped.png into an animated gold ASCII portrait.
+
+    pip install -r scripts/requirements-portrait.txt
+    python scripts/prep_photo.py path/to/photo.jpg
+    python scripts/make_ascii_svg.py          # -> assets/portrait-ascii.svg
+"""
 import html
 
-INPUT = Path("source-prepped.png")
-OUTPUT = Path("avi-ascii.svg")
-COLS = 88
-ROWS = 48
-CELL_W = 8
-CELL_H = 12
+from PIL import Image
+
+from theme import BG, GOLD_LIGHT, MONO, ROOT, svg_open, write_svg
+
+INPUT = ROOT / "source-prepped.png"
+COLS, ROWS = 88, 48
+CELL_W, CELL_H = 8, 12
 RAMP = " .`:-=+*cs#%@"
+
 
 def main():
     if not INPUT.exists():
         raise SystemExit("Missing source-prepped.png. Run scripts/prep_photo.py photo.jpg first.")
-    im = Image.open(INPUT).convert("L")
-    # Character cells are taller than wide; compensate for terminal glyph aspect ratio.
-    im = im.resize((COLS, ROWS), Image.Resampling.LANCZOS)
+    # Glyphs are taller than wide, so the ROWS/COLS ratio compensates for aspect.
+    im = Image.open(INPUT).convert("L").resize((COLS, ROWS), Image.Resampling.LANCZOS)
     pixels = list(im.getdata())
     width, height = COLS * CELL_W, ROWS * CELL_H
     parts = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" role="img">',
-        '<rect width="100%" height="100%" fill="#020617"/>',
-        '<style>text{font-family:monospace;font-size:10px;fill:#b8c7d9;white-space:pre}</style>'
+        svg_open(width, height, "ASCII portrait"),
+        f'<rect width="100%" height="100%" rx="16" fill="{BG}"/>',
+        f"<style>text{{font-family:{MONO};font-size:10px;fill:{GOLD_LIGHT};white-space:pre}}</style>",
     ]
     for y in range(ROWS):
-        chars = []
-        for x in range(COLS):
-            brightness = pixels[y * COLS + x]
-            idx = round((255 - brightness) / 255 * (len(RAMP) - 1))
-            chars.append(RAMP[idx])
-        line = html.escape("".join(chars))
-        y_pos = (y + 1) * CELL_H - 2
-        # Each row wipes in once, staggered vertically. SMIL is supported in SVG renderers.
-        delay = y * 0.045
+        row = pixels[y * COLS:(y + 1) * COLS]
+        line = "".join(RAMP[round((255 - b) / 255 * (len(RAMP) - 1))] for b in row)
+        # Each row wipes in once, staggered top to bottom.
         parts.append(
-            f'<clipPath id="row{y}"><rect x="0" y="0" width="0" height="{CELL_H}">'
+            f'<clipPath id="row{y}"><rect x="0" y="{y * CELL_H}" width="0" height="{CELL_H}">'
             f'<animate attributeName="width" from="0" to="{width}" dur="1.05s" '
-            f'begin="{delay:.3f}s" fill="freeze"/></rect></clipPath>'
+            f'begin="{y * 0.045:.3f}s" fill="freeze"/></rect></clipPath>'
         )
         parts.append(
-            f'<text x="2" y="{y_pos}" clip-path="url(#row{y})">{line}</text>'
+            f'<text x="2" y="{(y + 1) * CELL_H - 2}" clip-path="url(#row{y})" xml:space="preserve">'
+            f"{html.escape(line)}</text>"
         )
     parts.append("</svg>")
-    OUTPUT.write_text("\n".join(parts), encoding="utf-8")
-    print(f"Wrote {OUTPUT}")
+    write_svg("portrait-ascii.svg", parts)
+
 
 if __name__ == "__main__":
     main()

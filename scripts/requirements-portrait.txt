@@ -1,0 +1,6 @@
+# Optional extras for the ASCII portrait (prep_photo.py / make_ascii_svg.py)
+-r requirements.txt
+Pillow
+numpy
+opencv-python
+rembg

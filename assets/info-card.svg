@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-label="Pranav Hydrabade identity card"><title>Pranav Hydrabade identity card</title>
+<defs>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="0" spreadMethod="reflect"><stop offset="0" stop-color="#8C6A1F"/><stop offset="0.35" stop-color="#D4AF37"/><stop offset="0.5" stop-color="#F3D98B"/><stop offset="0.65" stop-color="#D4AF37"/><stop offset="1" stop-color="#8C6A1F"/><animateTransform attributeName="gradientTransform" type="translate" values="-1 0;1 0;-1 0" dur="8s" repeatCount="indefinite"/></linearGradient>
+<radialGradient id="crestGlow"><stop offset="0" stop-color="#D4AF37" stop-opacity="0.22"/><stop offset="1" stop-color="#D4AF37" stop-opacity="0"/></radialGradient>
+<path id="ringPath" d="M70 272 a150 150 0 1 1 300 0 a150 150 0 1 1 -300 0"/>
+<linearGradient id="border" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D4AF37" stop-opacity="0.7"/><stop offset="0.5" stop-color="#2A2418"/><stop offset="1" stop-color="#D4AF37" stop-opacity="0.5"/></linearGradient>
+</defs>
+<style>
+.k{font:700 15px 'SF Mono', 'JetBrains Mono', 'Cascadia Code', Consolas, 'Liberation Mono', monospace;fill:#D4AF37;letter-spacing:1px}
+.v{font:400 15px 'SF Mono', 'JetBrains Mono', 'Cascadia Code', Consolas, 'Liberation Mono', monospace;fill:#EDE6D6}
+.h{font:700 22px 'SF Mono', 'JetBrains Mono', 'Cascadia Code', Consolas, 'Liberation Mono', monospace;fill:#F3D98B}
+.m{font:400 13px 'SF Mono', 'JetBrains Mono', 'Cascadia Code', Consolas, 'Liberation Mono', monospace;fill:#8A8475}
+.mono{font:400 92px Didot, 'Bodoni 72', 'Bodoni MT', 'Playfair Display', 'Cormorant Garamond', Georgia, 'Times New Roman', serif;fill:url(#gold);letter-spacing:4px}
+.ring{font:600 12.5px 'SF Mono', 'JetBrains Mono', 'Cascadia Code', Consolas, 'Liberation Mono', monospace;fill:#D4AF37;letter-spacing:4.2px}
+.est{font:600 12px 'SF Mono', 'JetBrains Mono', 'Cascadia Code', Consolas, 'Liberation Mono', monospace;fill:#8A8475;letter-spacing:6px}
+@keyframes in{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none}}.row{animation:in .5s ease-out both}@keyframes spin{to{transform:rotate(360deg)}}.spin{transform-origin:220px 272px;animation:spin 40s linear infinite}@keyframes blink{50%{opacity:0}}.cur{animation:blink 1.1s steps(1) infinite}
+</style>
+<rect x="1" y="1" width="1198" height="498" rx="20" fill="#0B0B0F" stroke="url(#border)" stroke-width="1.5"/>
+<path d="M1 46 V21 a20 20 0 0 1 20 -20 H1179 a20 20 0 0 1 20 20 V46 Z" fill="#111118"/>
+<line x1="1" y1="46" x2="1199" y2="46" stroke="#2A2418"/>
+<circle cx="28" cy="24" r="6" fill="#8C6A1F"/><circle cx="48" cy="24" r="6" fill="#D4AF37"/><circle cx="68" cy="24" r="6" fill="#F3D98B"/>
+<text class="m" x="600.0" y="29" text-anchor="middle">pranav2329h@github: ~ — neofetch</text>
+<circle cx="220" cy="272" r="188" fill="url(#crestGlow)"/>
+<g class="spin"><text class="ring"><textPath href="#ringPath" textLength="936">PRANAV HYDRABADE  •  COMPUTER SCIENCE &amp; AI ENGINEER  •  </textPath></text></g>
+<circle cx="220" cy="272" r="128" fill="#111118" stroke="#D4AF37" stroke-width="1.5"/>
+<circle cx="220" cy="272" r="118" fill="none" stroke="#D4AF37" stroke-opacity="0.35"/>
+<text class="mono" x="220" y="302" text-anchor="middle">PH</text>
+<line x1="174" y1="328" x2="266" y2="328" stroke="#D4AF37" stroke-opacity="0.6"/>
+<text class="est" x="223" y="352" text-anchor="middle">EST. 2023</text>
+<line x1="430" y1="76" x2="430" y2="470" stroke="#2A2418"/>
+<text class="h" x="470" y="96">pranav2329h<tspan style="fill:#8A8475">@</tspan>github</text>
+<line x1="470" y1="112" x2="750" y2="112" stroke="#D4AF37" stroke-opacity="0.5" stroke-dasharray="4 4"/>
+<g class="row" style="animation-delay:0.15s"><text class="k" x="470" y="150">ROLE</text><text class="v" x="610" y="150">Full Stack &amp; AI Engineer</text></g>
+<g class="row" style="animation-delay:0.27s"><text class="k" x="470" y="177">DEGREE</text><text class="v" x="610" y="177">Computer Science &amp; Artificial Intelligence</text></g>
+<g class="row" style="animation-delay:0.39s"><text class="k" x="470" y="204">BASE</text><text class="v" x="610" y="204">Pune, India</text></g>
+<g class="row" style="animation-delay:0.51s"><text class="k" x="470" y="231">FOCUS</text><text class="v" x="610" y="231">AI / ML  ·  DevOps  ·  Cloud</text></g>
+<g class="row" style="animation-delay:0.63s"><text class="k" x="470" y="258">STACK</text><text class="v" x="610" y="258">Python  ·  React  ·  Flask  ·  Django</text></g>
+<g class="row" style="animation-delay:0.75s"><text class="k" x="470" y="285">DATA</text><text class="v" x="610" y="285">MongoDB  ·  MySQL  ·  Firebase</text></g>
+<g class="row" style="animation-delay:0.87s"><text class="k" x="470" y="312">CLOUD</text><text class="v" x="610" y="312">AWS  ·  Docker  ·  Terraform  ·  Jenkins</text></g>
+<g class="row" style="animation-delay:0.99s"><text class="k" x="470" y="339">LEARNING</text><text class="v" x="610" y="339">Kubernetes  ·  MLOps</text></g>
+<g class="row" style="animation-delay:1.11s"><text class="k" x="470" y="366">COMMITS</text><text class="v" x="610" y="366">445 contributions in the last year</text></g>
+<g class="row" style="animation-delay:1.23s"><text class="k" x="470" y="393">STREAK</text><text class="v" x="610" y="393">24 days current  ·  24 days best</text></g>
+<g class="row" style="animation-delay:1.35s"><text class="k" x="470" y="420">UPTIME</text><text class="v" x="610" y="420">Shipping on GitHub since 2023</text></g>
+<rect x="470" y="451" width="28" height="14" rx="3" fill="#17171E"/>
+<rect x="504" y="451" width="28" height="14" rx="3" fill="#3A2E12"/>
+<rect x="538" y="451" width="28" height="14" rx="3" fill="#6E5518"/>
+<rect x="572" y="451" width="28" height="14" rx="3" fill="#B08A2E"/>
+<rect x="606" y="451" width="28" height="14" rx="3" fill="#F0CF6B"/>
+<rect x="640" y="451" width="28" height="14" rx="3" fill="#D4AF37"/>
+<rect x="674" y="451" width="28" height="14" rx="3" fill="#F3D98B"/>
+<rect x="708" y="451" width="28" height="14" rx="3" fill="#EDE6D6"/>
+<text class="v" x="756" y="464"><tspan style="fill:#D4AF37">$</tspan> <tspan class="cur" style="fill:#F3D98B">█</tspan></text>
+</svg>
