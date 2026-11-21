@@ -9,6 +9,7 @@ on:
     paths:
       - "scripts/**"
       - "data/profile.json"
+      - "data/avatar.jpg"
       - ".github/workflows/update-profile-art.yml"
 
 permissions:
@@ -54,4 +55,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: refresh profile art [skip ci]"
-          file_pattern: "data/*.json assets/"
+          file_pattern: "README.md data/*.json assets/"

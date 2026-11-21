@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="330" viewBox="0 0 600 330" role="img" aria-label="TensorTonic Solutions — ML algorithms from scratch"><title>TensorTonic Solutions — ML algorithms from scratch</title>
+<defs>
+<linearGradient id="neon" x1="0" y1="0" x2="1" y2="0" spreadMethod="repeat"><stop offset="0" stop-color="#22D3EE"/><stop offset="0.33" stop-color="#A78BFA"/><stop offset="0.66" stop-color="#F472B6"/><stop offset="1" stop-color="#22D3EE"/><animateTransform attributeName="gradientTransform" type="translate" values="0 0;1 0" dur="5s" repeatCount="indefinite"/></linearGradient>
+<radialGradient id="glow" cx="1" cy="0" r="1"><stop offset="0" stop-color="#A78BFA" stop-opacity="0.18"/><stop offset="1" stop-color="#A78BFA" stop-opacity="0"/></radialGradient>
+<pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1" fill="#30363D"/></pattern>
+</defs>
+<style>
+.kind{font:700 12px 'SF Mono', 'JetBrains Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;letter-spacing:2px;fill:#22D3EE}
+.meta{font:600 13px 'SF Mono', 'JetBrains Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;fill:#8B949E}
+.title{font:800 32px -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;fill:#E6EDF3}
+.tag{font:600 15px 'SF Mono', 'JetBrains Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;fill:#A78BFA}
+.desc{font:400 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;fill:#E6EDF3;fill-opacity:.82}
+.chip{font:600 13px 'SF Mono', 'JetBrains Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;fill:#E6EDF3}
+.cta{font:800 13px 'SF Mono', 'JetBrains Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;letter-spacing:1px}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}.r{animation:rise .7s ease-out both}
+@keyframes trail{to{stroke-dashoffset:-1000}}.trail{animation:trail 5s linear infinite}
+@keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}.go{animation:nudge 1.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}.pulse{animation:pulse 1.6s ease-in-out infinite}
+</style>
+<rect x="1" y="1" width="598" height="328" rx="16" fill="#0D1117"/>
+<rect x="1" y="1" width="598" height="328" rx="16" fill="url(#dots)" opacity=".55"/>
+<rect x="1" y="1" width="598" height="328" rx="16" fill="url(#glow)"/>
+<rect x="1" y="1" width="598" height="328" rx="16" fill="none" stroke="#30363D" stroke-width="1.5"/>
+<rect class="trail" x="1" y="1" width="598" height="328" rx="16" fill="none" stroke="url(#neon)" stroke-width="2.5" pathLength="1000" stroke-dasharray="140 860" stroke-linecap="round"/>
+<rect x="32" y="34" width="4" height="16" rx="2" fill="url(#neon)"/>
+<g class="r"><text class="kind" x="46" y="47">ML · FUNDAMENTALS</text>
+</g>
+<g class="r" style="animation-delay:.12s"><text class="title" x="32" y="96">TensorTonic Solutions</text>
+<text class="tag" x="32" y="124"><tspan style="fill:#22D3EE">//</tspan> ML algorithms from scratch</text></g>
+<g class="r" style="animation-delay:.24s">
+<text class="desc" x="32" y="162">Verified from-scratch implementations of core machine-</text>
+<text class="desc" x="32" y="187">learning and deep-learning algorithms, auto-synced from</text>
+<text class="desc" x="32" y="212">TensorTonic.</text>
+</g>
+<g class="r" style="animation-delay:.36s">
+<rect x="32" y="240" width="75" height="28" rx="8" fill="#161B22" stroke="#30363D"/>
+<text class="chip" x="69" y="259" text-anchor="middle">Python</text>
+<rect x="114.6" y="240" width="66" height="28" rx="8" fill="#161B22" stroke="#30363D"/>
+<text class="chip" x="148" y="259" text-anchor="middle">NumPy</text>
+<rect x="189.1" y="240" width="131" height="28" rx="8" fill="#161B22" stroke="#30363D"/>
+<text class="chip" x="255" y="259" text-anchor="middle">Deep Learning</text>
+<rect x="328.4" y="240" width="107" height="28" rx="8" fill="#161B22" stroke="#30363D"/>
+<text class="chip" x="382" y="259" text-anchor="middle">Algorithms</text>
+</g>
+<line x1="32" y1="288" x2="568" y2="288" stroke="#30363D"/>
+<text class="meta" x="32" y="313"><tspan style="fill:#3572A5">●</tspan> Python  ·  updated Oct 2026</text>
+<g class="go"><text class="cta" x="568" y="313" text-anchor="end" fill="url(#neon)">VIEW REPO →</text></g>
+</svg>

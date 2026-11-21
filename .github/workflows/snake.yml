@@ -17,12 +17,13 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Generate gold snake from my contribution graph
+      - name: Generate dark + light snakes from my contribution graph
         uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/snake-gold.svg?palette=github-dark&color_snake=#F3D98B&color_dots=#17171E,#3A2E12,#6E5518,#B08A2E,#F0CF6B
+            dist/snake-dark.svg?palette=github-dark&color_snake=#A78BFA&color_dots=#161B22,#0C4A5E,#0E7490,#22D3EE,#A5F3FC
+            dist/snake-light.svg?palette=github-light&color_snake=#7C3AED&color_dots=#EBEDF0,#A5F3FC,#22D3EE,#0891B2,#155E75
 
       - name: Publish to the output branch
         uses: crazy-max/ghaction-github-pages@v4

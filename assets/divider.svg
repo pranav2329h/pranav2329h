@@ -1,4 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="30" viewBox="0 0 1200 30" role="img" aria-label="divider"><title>divider</title>
-<defs><linearGradient id="fadeL" x1="0" x2="1"><stop offset="0" stop-color="#D4AF37" stop-opacity="0"/><stop offset="1" stop-color="#D4AF37"/></linearGradient><linearGradient id="fadeR" x1="0" x2="1"><stop offset="0" stop-color="#D4AF37"/><stop offset="1" stop-color="#D4AF37" stop-opacity="0"/></linearGradient></defs>
-<g class=""><line x1="40.0" y1="15" x2="586.0" y2="15" stroke="url(#fadeL)" stroke-width="1.2"/><line x1="614.0" y1="15" x2="1160.0" y2="15" stroke="url(#fadeR)" stroke-width="1.2"/><path d="M600.0 9 L606.0 15 L600.0 21 L594.0 15 Z" fill="#D4AF37"/><path d="M600.0 4 L611.0 15 L600.0 26 L589.0 15 Z" fill="none" stroke="#D4AF37" stroke-opacity="0.5"/></g>
-</svg>

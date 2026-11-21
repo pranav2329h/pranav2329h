@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="540" viewBox="0 0 1200 540" role="img" aria-label="Pranav Hydrabade identity card"><title>Pranav Hydrabade identity card</title>
+<defs>
+<linearGradient id="neon" x1="0" y1="0" x2="1" y2="0" spreadMethod="repeat"><stop offset="0" stop-color="#0891B2"/><stop offset="0.33" stop-color="#7C3AED"/><stop offset="0.66" stop-color="#DB2777"/><stop offset="1" stop-color="#0891B2"/><animateTransform attributeName="gradientTransform" type="translate" values="0 0;1 0" dur="5s" repeatCount="indefinite"/></linearGradient>
+<pattern id="crt" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#FFFFFF" opacity=".18"/></pattern>
+<linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0891B2" stop-opacity="0"/><stop offset=".85" stop-color="#0891B2" stop-opacity=".28"/><stop offset="1" stop-color="#0891B2" stop-opacity=".9"/></linearGradient>
+<linearGradient id="shade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="1" stop-color="#FFFFFF" stop-opacity=".92"/></linearGradient>
+<linearGradient id="tint" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0891B2" stop-opacity=".10"/><stop offset="1" stop-color="#7C3AED" stop-opacity=".16"/></linearGradient>
+</defs>
+<style>
+.k{font:700 15px 'SF Mono', 'JetBrains Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;fill:#0891B2}
+.v{font:500 15px 'SF Mono', 'JetBrains Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;fill:#1F2328}
+.h{font:800 24px 'SF Mono', 'JetBrains Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;fill:#1F2328}
+.hud{font:700 11px 'SF Mono', 'JetBrains Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;fill:#1F2328;letter-spacing:1.5px}
+.tag{font:700 12px 'SF Mono', 'JetBrains Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;fill:#1F2328;letter-spacing:1.5px}
+.mono{font:800 92px -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif}
+g.ascii text{font:600 11.6px 'SF Mono', 'JetBrains Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;fill:#0891B2}
+@keyframes asciiFade{0%,24%{opacity:1}32%,100%{opacity:0}}.ascii{animation:asciiFade 14s linear infinite}
+@keyframes photoFade{0%,24%{opacity:0}32%,84%{opacity:1}92%,100%{opacity:0}}.photo{animation:photoFade 14s linear infinite}
+@keyframes glitch{0%,79.9%{opacity:0;transform:none}80%{opacity:1;transform:translateX(-14px)}81%{transform:translateX(12px)}82%{transform:translateX(-7px)}83%{transform:translateX(9px)}84%,100%{opacity:0;transform:none}}
+.glitch{opacity:0;animation:glitch 14s steps(1) infinite}.g1{animation-delay:-.15s}.g2{animation-delay:.1s}
+@keyframes scan{from{transform:translateY(0)}to{transform:translateY(490px)}}.scan{animation:scan 3.2s linear infinite}
+@keyframes trail{to{stroke-dashoffset:-1000}}.trail{animation:trail 6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.spin{transform-origin:208.0px 266.0px;animation:spin 8s linear infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.2}}.pulse{animation:pulse 1.6s ease-in-out infinite}
+@keyframes in{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:none}}.row{animation:in .5s ease-out both}
+@keyframes blink{50%{opacity:0}}.cur{animation:blink 1s steps(1) infinite}
+</style>
+<rect x="1" y="1" width="1198" height="538" rx="16" fill="#FFFFFF" stroke="#D0D7DE" stroke-width="1.5"/>
+<path d="M1 44 V17 a16 16 0 0 1 16 -16 H1183 a16 16 0 0 1 16 16 V44 Z" fill="#F6F8FA"/><line x1="1" y1="44" x2="1199" y2="44" stroke="#D0D7DE"/><circle cx="26" cy="23" r="6.5" fill="#FF5F57"/><circle cx="48" cy="23" r="6.5" fill="#FEBC2E"/><circle cx="70" cy="23" r="6.5" fill="#28C840"/><text x="600.0" y="28" text-anchor="middle" style="font:500 13px 'SF Mono', 'JetBrains Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;fill:#656D76">pranav2329h@github: ~ — neofetch</text>
+<clipPath id="frame"><rect x="40" y="76" width="336" height="420" rx="18"/></clipPath>
+<rect x="40" y="76" width="336" height="420" rx="18" fill="#F6F8FA"/>
+<g clip-path="url(#frame)">
+<circle class="spin" cx="208.0" cy="266.0" r="104" fill="none" stroke="url(#neon)" stroke-width="3" stroke-dasharray="120 533" stroke-linecap="round"/>
+<circle cx="208.0" cy="266.0" r="90" fill="none" stroke="#D0D7DE"/>
+<text class="mono" x="208.0" y="294.0" text-anchor="middle" fill="url(#neon)">PH</text>
+<rect x="40" y="76" width="336" height="420" fill="url(#crt)"/>
+<rect class="scan" x="40" y="6" width="336" height="70" fill="url(#beam)"/>
+<rect x="40" y="442" width="336" height="54" fill="url(#shade)"/>
+</g>
+<text class="hud" x="56" y="102"><tspan class="pulse" style="fill:#DB2777">●</tspan> ID.CARD</text>
+<text class="hud" x="360" y="102" text-anchor="end">v1.0</text>
+<text class="tag" x="56" y="476">PRANAV2329H <tspan style="fill:#1A7F37">// VERIFIED ✔</tspan></text>
+<rect x="40" y="76" width="336" height="420" rx="18" fill="none" stroke="#D0D7DE" stroke-width="1.5"/>
+<rect class="trail" x="40" y="76" width="336" height="420" rx="18" fill="none" stroke="url(#neon)" stroke-width="3" pathLength="1000" stroke-dasharray="180 820" stroke-linecap="round"/>
+<path d="M32 90 V68 H54" fill="none" stroke="#0891B2" stroke-width="2"/>
+<path d="M384 90 V68 H362" fill="none" stroke="#0891B2" stroke-width="2"/>
+<path d="M32 482 V504 H54" fill="none" stroke="#0891B2" stroke-width="2"/>
+<path d="M384 482 V504 H362" fill="none" stroke="#0891B2" stroke-width="2"/>
+<text class="h" x="430" y="104">pranav2329h<tspan style="fill:#7C3AED">@</tspan>github</text>
+<rect x="430" y="118" width="300" height="3" rx="1.5" fill="url(#neon)"/>
+<g class="row" style="animation-delay:0.20s"><text class="k" x="430" y="158">ROLE</text><text class="v" x="570" y="158">Full Stack &amp; AI Engineer</text></g>
+<g class="row" style="animation-delay:0.30s"><text class="k" x="430" y="186">DEGREE</text><text class="v" x="570" y="186">Computer Science &amp; Artificial Intelligence</text></g>
+<g class="row" style="animation-delay:0.40s"><text class="k" x="430" y="214">BASE</text><text class="v" x="570" y="214">Pune, India</text></g>
+<g class="row" style="animation-delay:0.50s"><text class="k" x="430" y="242">FOCUS</text><text class="v" x="570" y="242">AI / ML  ·  DevOps  ·  Cloud</text></g>
+<g class="row" style="animation-delay:0.60s"><text class="k" x="430" y="270">STACK</text><text class="v" x="570" y="270">Python  ·  React  ·  Flask  ·  Django</text></g>
+<g class="row" style="animation-delay:0.70s"><text class="k" x="430" y="298">DATA</text><text class="v" x="570" y="298">MongoDB  ·  MySQL  ·  Firebase</text></g>
+<g class="row" style="animation-delay:0.80s"><text class="k" x="430" y="326">CLOUD</text><text class="v" x="570" y="326">AWS  ·  Docker  ·  Terraform  ·  Jenkins</text></g>
+<g class="row" style="animation-delay:0.90s"><text class="k" x="430" y="354">LEARNING</text><text class="v" x="570" y="354">Kubernetes  ·  MLOps</text></g>
+<g class="row" style="animation-delay:1.00s"><text class="k" x="430" y="382">COMMITS</text><text class="v" x="570" y="382">445 contributions in the last year</text></g>
+<g class="row" style="animation-delay:1.10s"><text class="k" x="430" y="410">STREAK</text><text class="v" x="570" y="410">24 days current  ·  24 days best</text></g>
+<g class="row" style="animation-delay:1.20s"><text class="k" x="430" y="438">UPTIME</text><text class="v" x="570" y="438">Shipping on GitHub since 2023</text></g>
+<rect x="430" y="462" width="30" height="16" rx="4" fill="#A5F3FC"/>
+<rect x="466" y="462" width="30" height="16" rx="4" fill="#22D3EE"/>
+<rect x="502" y="462" width="30" height="16" rx="4" fill="#0891B2"/>
+<rect x="538" y="462" width="30" height="16" rx="4" fill="#155E75"/>
+<rect x="574" y="462" width="30" height="16" rx="4" fill="#0891B2"/>
+<rect x="610" y="462" width="30" height="16" rx="4" fill="#7C3AED"/>
+<rect x="646" y="462" width="30" height="16" rx="4" fill="#DB2777"/>
+<rect x="682" y="462" width="30" height="16" rx="4" fill="#1A7F37"/>
+<rect class="cur" x="724" y="460" width="10" height="20" fill="#0891B2"/>
+</svg>

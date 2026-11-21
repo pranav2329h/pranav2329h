@@ -3,7 +3,8 @@ __pycache__/
 .venv/
 venv/
 
-# Portrait pipeline inputs stay local
-source-prepped.png
-*.jpg
-*.jpeg
+# Raw photos stay local; only the cropped data/avatar.jpg is committed
+/*.jpg
+/*.jpeg
+/*.png
+/*.heic

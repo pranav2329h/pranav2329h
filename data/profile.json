@@ -4,7 +4,23 @@
   "headline": "Computer Science & AI Engineer",
   "location": "Pune, India",
   "since": "2023",
-  "eyebrow": "FULL STACK  ·  ARTIFICIAL INTELLIGENCE  ·  CLOUD & DEVOPS",
+  "links": {
+    "portfolio": "https://pranav-hydrabade.vercel.app/",
+    "linkedin": "https://www.linkedin.com/in/pranav-hydrabade-10952a255",
+    "email": "pranav2329h@gmail.com"
+  },
+  "roles": [
+    "Full Stack Developer",
+    "AI / ML Engineer",
+    "DevOps & Cloud Builder",
+    "Explainable-AI Enthusiast"
+  ],
+  "typing": [
+    "Building AI-powered full-stack products",
+    "Machine Learning • Explainable AI • NLP",
+    "Shipping with Docker, Jenkins & AWS",
+    "Turning ideas into production systems"
+  ],
   "info": [
     ["ROLE", "Full Stack & AI Engineer"],
     ["DEGREE", "Computer Science & Artificial Intelligence"],
@@ -15,11 +31,32 @@
     ["CLOUD", "AWS  ·  Docker  ·  Terraform  ·  Jenkins"],
     ["LEARNING", "Kubernetes  ·  MLOps"]
   ],
+  "terminal": [
+    {"cmd": "whoami", "out": [["text", "Pranav Hydrabade — Computer Science & AI Engineer · Pune, India"]]},
+    {"cmd": "cat mission.txt", "out": [["c2", "→ Build intelligent, explainable systems and ship them to production."]]},
+    {"cmd": "ls ~/skills", "out": [["c1", "python/  react/  flask/  django/  ml/  docker/  aws/  terraform/  jenkins/"]]},
+    {"cmd": "git log --stat --since=1.year", "out": [["c3", "{total} contributions · {active} active days · {longest}-day best streak"]]},
+    {"cmd": "echo $STATUS", "out": [["ok", "✔ Open to AI/ML, full-stack & DevOps opportunities"]]}
+  ],
+  "orbit": [
+    ["Python", "React", "Flask", "Django"],
+    ["AWS", "Docker", "Jenkins", "Terraform", "Kubernetes", "Linux"],
+    ["TensorFlow", "PyTorch", "Scikit-learn", "SHAP", "MongoDB", "MySQL", "Firebase", "Next.js"]
+  ],
+  "skills": [
+    ["Languages", "python,java,js,ts,bash"],
+    ["Frontend", "html,css,react,nextjs,tailwind,vite"],
+    ["Backend", "flask,django,nodejs,express,spring"],
+    ["AI / ML", "tensorflow,pytorch,sklearn"],
+    ["Data", "mysql,mongodb,firebase,prisma,sqlite"],
+    ["Cloud & DevOps", "aws,docker,kubernetes,jenkins,terraform,githubactions,nginx,linux"],
+    ["Tools", "git,github,vscode,postman"]
+  ],
   "projects": [
     {
       "slug": "cloudvault",
       "title": "CloudVault Pro",
-      "kind": "FULL STACK  ·  CLOUD",
+      "kind": "FULL STACK · CLOUD",
       "tagline": "Secure cloud storage & collaboration",
       "description": "Multi-tenant file vault with JWT security, S3 storage, public link sharing and a Dockerised Nginx stack shipped by Jenkins.",
       "stack": ["React", "Flask", "MongoDB", "AWS S3", "Docker", "Jenkins"],
@@ -28,7 +65,7 @@
     {
       "slug": "credisure",
       "title": "Credisure",
-      "kind": "MACHINE LEARNING  ·  XAI",
+      "kind": "MACHINE LEARNING · XAI",
       "tagline": "Explainable loan approval",
       "description": "Scikit-learn risk engine that explains every decision with SHAP, wrapped in an animated React dashboard with Firebase auth.",
       "stack": ["Python", "Scikit-learn", "SHAP", "React", "Firebase"],
@@ -37,7 +74,7 @@
     {
       "slug": "auto-rollback",
       "title": "Jenkins Auto-Rollback",
-      "kind": "DEVOPS  ·  CI/CD",
+      "kind": "DEVOPS · CI/CD",
       "tagline": "Self-healing deployments",
       "description": "Builds and pushes tagged Docker images, deploys to EC2, health-checks the release and restores the last good image on failure.",
       "stack": ["Jenkins", "Docker", "AWS EC2", "Bash", "Python"],
@@ -46,26 +83,26 @@
     {
       "slug": "vayucast",
       "title": "VayuCast",
-      "kind": "AI  ·  ENVIRONMENT",
+      "kind": "AI · ENVIRONMENT",
       "tagline": "Pollution hotspot prediction",
       "description": "Predicts AQI hotspots from traffic and wind dynamics, then maps human exposure to support cleaner-air decisions.",
-      "stack": ["Python", "Machine Learning", "Geospatial", "Data Viz"],
+      "stack": ["Python", "ML", "Geospatial", "Data Viz"],
       "repo": null,
       "status": "IN DEVELOPMENT"
     },
     {
       "slug": "salespulse",
       "title": "SalesPulse AI",
-      "kind": "FULL STACK  ·  ANALYTICS",
+      "kind": "FULL STACK · ANALYTICS",
       "tagline": "Retail analytics dashboard",
-      "description": "Revenue, category and top-SKU insights with live inventory and product management, on an animated glass dashboard.",
+      "description": "Revenue, category and top-SKU insights with live inventory and product management on an animated glass dashboard.",
       "stack": ["React", "Express", "Prisma", "MySQL", "Chart.js"],
       "repo": "SalesPulse-AI-Retail-analytics-recommendations"
     },
     {
       "slug": "tensortonic",
       "title": "TensorTonic Solutions",
-      "kind": "ML  ·  FUNDAMENTALS",
+      "kind": "ML · FUNDAMENTALS",
       "tagline": "ML algorithms from scratch",
       "description": "Verified from-scratch implementations of core machine-learning and deep-learning algorithms, auto-synced from TensorTonic.",
       "stack": ["Python", "NumPy", "Deep Learning", "Algorithms"],

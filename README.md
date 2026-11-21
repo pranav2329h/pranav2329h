@@ -1,36 +1,26 @@
 <!--
-  This profile is generated. Edit data/profile.json, then run:
-    python scripts/fetch_contributions.py && python scripts/fetch_repos.py && python scripts/build.py
-  GitHub Actions refreshes the SVGs in assets/ daily.
+  ⚙️ GENERATED FILE — do not edit by hand.
+  Edit data/profile.json, then run:  python scripts/build.py
+  GitHub Actions refreshes stats and re-renders everything daily.
 -->
 
 <div align="center">
 
-<img src="./assets/header.svg" width="100%" alt="Pranav Hydrabade — Computer Science & AI Engineer" />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/header.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/header.svg" /><img src="./assets/dark/header.svg" width="100%" alt="Pranav Hydrabade — Computer Science & AI Engineer" /></picture>
 
-<a href="https://github.com/pranav2329h">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=19&duration=2800&pause=900&color=D4AF37&center=true&vCenter=true&width=720&lines=Building+AI-powered+full-stack+products;Machine+Learning+%E2%80%A2+Explainable+AI+%E2%80%A2+NLP;Shipping+with+Docker%2C+Jenkins+%26+AWS;Turning+ideas+into+production+systems" alt="Typing animation" />
-</a>
+<a href="https://pranav-hydrabade.vercel.app/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=2600&pause=900&color=22D3EE&center=true&vCenter=true&width=720&lines=Building+AI-powered+full-stack+products%3BMachine+Learning+%E2%80%A2+Explainable+AI+%E2%80%A2+NLP%3BShipping+with+Docker%2C+Jenkins+%26+AWS%3BTurning+ideas+into+production+systems" /><source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=2600&pause=900&color=0891B2&center=true&vCenter=true&width=720&lines=Building+AI-powered+full-stack+products%3BMachine+Learning+%E2%80%A2+Explainable+AI+%E2%80%A2+NLP%3BShipping+with+Docker%2C+Jenkins+%26+AWS%3BTurning+ideas+into+production+systems" /><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=2600&pause=900&color=22D3EE&center=true&vCenter=true&width=720&lines=Building+AI-powered+full-stack+products%3BMachine+Learning+%E2%80%A2+Explainable+AI+%E2%80%A2+NLP%3BShipping+with+Docker%2C+Jenkins+%26+AWS%3BTurning+ideas+into+production+systems" alt="Typing animation" /></picture></a>
 
 <p>
-  <a href="https://pranav-hydrabade.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-Visit-D4AF37?style=for-the-badge&logo=vercel&logoColor=D4AF37&labelColor=0B0B0F" alt="Portfolio" /></a>
-  <a href="https://www.linkedin.com/in/pranav-hydrabade-10952a255"><img src="https://img.shields.io/badge/LinkedIn-Connect-D4AF37?style=for-the-badge&logo=linkedin&logoColor=D4AF37&labelColor=0B0B0F" alt="LinkedIn" /></a>
-  <a href="mailto:pranav2329h@gmail.com"><img src="https://img.shields.io/badge/Email-Say_Hello-D4AF37?style=for-the-badge&logo=gmail&logoColor=D4AF37&labelColor=0B0B0F" alt="Email" /></a>
-  <img src="https://komarev.com/ghpvc/?username=pranav2329h&label=Profile+Views&color=D4AF37&style=for-the-badge" alt="Profile views" />
+<a href="https://pranav-hydrabade.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-Visit-22D3EE?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0D1117" alt="Portfolio" /></a> <a href="https://www.linkedin.com/in/pranav-hydrabade-10952a255"><img src="https://img.shields.io/badge/LinkedIn-Connect-22D3EE?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0D1117" alt="LinkedIn" /></a> <a href="mailto:pranav2329h@gmail.com"><img src="https://img.shields.io/badge/Email-Say%20hello-22D3EE?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0D1117" alt="Email" /></a>
+<img src="https://komarev.com/ghpvc/?username=pranav2329h&label=Profile+Views&color=22D3EE&style=for-the-badge" alt="Profile views" />
 </p>
 
-<br />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/titles/about.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/titles/about.svg" /><img src="./assets/dark/titles/about.svg" width="100%" alt="01 · The Engineer" /></picture>
 
-<img src="./assets/titles/about.svg" width="100%" alt="01 — About: The Engineer" />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/info-card.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/info-card.svg" /><img src="./assets/dark/info-card.svg" width="100%" alt="Identity card with animated portrait and quick facts" /></picture>
 
-<img src="./assets/info-card.svg" width="100%" alt="Identity card: Full Stack & AI Engineer based in Pune, India" />
-
-<br />
-
-<p>
-  <em>I build intelligent systems end to end, from training explainable ML models<br />
-  to shipping them behind clean React interfaces on containerised AWS infrastructure.</em>
-</p>
+<p><em>I build intelligent systems end to end, from training explainable ML models<br />
+to shipping them behind clean React interfaces on containerised AWS infrastructure.</em></p>
 
 <table>
 <tr>
@@ -40,69 +30,55 @@
 </tr>
 </table>
 
-<br />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/titles/terminal.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/titles/terminal.svg" /><img src="./assets/dark/titles/terminal.svg" width="100%" alt="02 · Live Terminal" /></picture>
 
-<img src="./assets/titles/arsenal.svg" width="100%" alt="02 — Arsenal: Tech Arsenal" />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/terminal.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/terminal.svg" /><img src="./assets/dark/terminal.svg" width="100%" alt="Animated terminal session introducing Pranav" /></picture>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/titles/arsenal.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/titles/arsenal.svg" /><img src="./assets/dark/titles/arsenal.svg" width="100%" alt="03 · Tech Arsenal" /></picture>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/orbit.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/orbit.svg" /><img src="./assets/dark/orbit.svg" width="100%" alt="Animated orbit of the tech stack" /></picture>
 
 <table>
-<tr><td align="right"><b>Languages</b></td><td><img src="https://skillicons.dev/icons?i=python,java,js,ts,bash&theme=dark" alt="Python, Java, JavaScript, TypeScript, Bash" /></td></tr>
-<tr><td align="right"><b>Frontend</b></td><td><img src="https://skillicons.dev/icons?i=html,css,react,nextjs,tailwind,vite&theme=dark" alt="HTML, CSS, React, Next.js, Tailwind, Vite" /></td></tr>
-<tr><td align="right"><b>Backend</b></td><td><img src="https://skillicons.dev/icons?i=flask,django,nodejs,express,spring&theme=dark" alt="Flask, Django, Node.js, Express, Spring" /></td></tr>
-<tr><td align="right"><b>AI / ML</b></td><td><img src="https://skillicons.dev/icons?i=tensorflow,pytorch,sklearn&theme=dark" alt="TensorFlow, PyTorch, Scikit-learn" />&nbsp;
-<img src="https://img.shields.io/badge/SHAP-17171E?style=for-the-badge" alt="SHAP" />
-<img src="https://img.shields.io/badge/XGBoost-17171E?style=for-the-badge" alt="XGBoost" />
-<img src="https://img.shields.io/badge/NLP-17171E?style=for-the-badge" alt="NLP" /></td></tr>
-<tr><td align="right"><b>Data</b></td><td><img src="https://skillicons.dev/icons?i=mysql,mongodb,firebase,prisma,sqlite&theme=dark" alt="MySQL, MongoDB, Firebase, Prisma, SQLite" /></td></tr>
-<tr><td align="right"><b>Cloud &amp; DevOps</b></td><td><img src="https://skillicons.dev/icons?i=aws,docker,kubernetes,jenkins,terraform,githubactions,nginx,linux&theme=dark" alt="AWS, Docker, Kubernetes, Jenkins, Terraform, GitHub Actions, Nginx, Linux" /></td></tr>
-<tr><td align="right"><b>Tools</b></td><td><img src="https://skillicons.dev/icons?i=git,github,vscode,postman&theme=dark" alt="Git, GitHub, VS Code, Postman" /></td></tr>
+<tr><td align="right"><b>Languages</b></td><td><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=python,java,js,ts,bash&theme=dark" /><source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=python,java,js,ts,bash&theme=light" /><img src="https://skillicons.dev/icons?i=python,java,js,ts,bash&theme=dark" alt="python, java, js, ts, bash" /></picture></td></tr>
+<tr><td align="right"><b>Frontend</b></td><td><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=html,css,react,nextjs,tailwind,vite&theme=dark" /><source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=html,css,react,nextjs,tailwind,vite&theme=light" /><img src="https://skillicons.dev/icons?i=html,css,react,nextjs,tailwind,vite&theme=dark" alt="html, css, react, nextjs, tailwind, vite" /></picture></td></tr>
+<tr><td align="right"><b>Backend</b></td><td><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=flask,django,nodejs,express,spring&theme=dark" /><source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=flask,django,nodejs,express,spring&theme=light" /><img src="https://skillicons.dev/icons?i=flask,django,nodejs,express,spring&theme=dark" alt="flask, django, nodejs, express, spring" /></picture></td></tr>
+<tr><td align="right"><b>AI / ML</b></td><td><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=tensorflow,pytorch,sklearn&theme=dark" /><source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=tensorflow,pytorch,sklearn&theme=light" /><img src="https://skillicons.dev/icons?i=tensorflow,pytorch,sklearn&theme=dark" alt="tensorflow, pytorch, sklearn" /></picture></td></tr>
+<tr><td align="right"><b>Data</b></td><td><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=mysql,mongodb,firebase,prisma,sqlite&theme=dark" /><source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=mysql,mongodb,firebase,prisma,sqlite&theme=light" /><img src="https://skillicons.dev/icons?i=mysql,mongodb,firebase,prisma,sqlite&theme=dark" alt="mysql, mongodb, firebase, prisma, sqlite" /></picture></td></tr>
+<tr><td align="right"><b>Cloud & DevOps</b></td><td><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=aws,docker,kubernetes,jenkins,terraform,githubactions,nginx,linux&theme=dark" /><source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=aws,docker,kubernetes,jenkins,terraform,githubactions,nginx,linux&theme=light" /><img src="https://skillicons.dev/icons?i=aws,docker,kubernetes,jenkins,terraform,githubactions,nginx,linux&theme=dark" alt="aws, docker, kubernetes, jenkins, terraform, githubactions, nginx, linux" /></picture></td></tr>
+<tr><td align="right"><b>Tools</b></td><td><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=git,github,vscode,postman&theme=dark" /><source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=git,github,vscode,postman&theme=light" /><img src="https://skillicons.dev/icons?i=git,github,vscode,postman&theme=dark" alt="git, github, vscode, postman" /></picture></td></tr>
 </table>
 
-<br />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/titles/work.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/titles/work.svg" /><img src="./assets/dark/titles/work.svg" width="100%" alt="04 · Featured Work" /></picture>
 
-<img src="./assets/titles/work.svg" width="100%" alt="03 — Portfolio: Featured Work" />
+<a href="https://github.com/pranav2329h/CloudVault"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/projects/cloudvault.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/projects/cloudvault.svg" /><img src="./assets/dark/projects/cloudvault.svg" width="49%" alt="CloudVault Pro — Secure cloud storage & collaboration" /></picture></a>
+<a href="https://github.com/pranav2329h/loan-approval-ui"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/projects/credisure.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/projects/credisure.svg" /><img src="./assets/dark/projects/credisure.svg" width="49%" alt="Credisure — Explainable loan approval" /></picture></a>
+<a href="https://github.com/pranav2329h/jenkins-auto-rollback"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/projects/auto-rollback.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/projects/auto-rollback.svg" /><img src="./assets/dark/projects/auto-rollback.svg" width="49%" alt="Jenkins Auto-Rollback — Self-healing deployments" /></picture></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/projects/vayucast.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/projects/vayucast.svg" /><img src="./assets/dark/projects/vayucast.svg" width="49%" alt="VayuCast — Pollution hotspot prediction" /></picture>
+<a href="https://github.com/pranav2329h/SalesPulse-AI-Retail-analytics-recommendations"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/projects/salespulse.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/projects/salespulse.svg" /><img src="./assets/dark/projects/salespulse.svg" width="49%" alt="SalesPulse AI — Retail analytics dashboard" /></picture></a>
+<a href="https://github.com/pranav2329h/TensorTonic-Solutions"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/projects/tensortonic.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/projects/tensortonic.svg" /><img src="./assets/dark/projects/tensortonic.svg" width="49%" alt="TensorTonic Solutions — ML algorithms from scratch" /></picture></a>
 
-<a href="https://github.com/pranav2329h/CloudVault"><img src="./assets/projects/cloudvault.svg" width="49%" alt="CloudVault Pro — secure cloud storage & collaboration" /></a>
-<a href="https://github.com/pranav2329h/loan-approval-ui"><img src="./assets/projects/credisure.svg" width="49%" alt="Credisure — explainable loan approval" /></a>
-<a href="https://github.com/pranav2329h/jenkins-auto-rollback"><img src="./assets/projects/auto-rollback.svg" width="49%" alt="Jenkins Auto-Rollback — self-healing deployments" /></a>
-<img src="./assets/projects/vayucast.svg" width="49%" alt="VayuCast — pollution hotspot prediction (in development)" />
-<a href="https://github.com/pranav2329h/SalesPulse-AI-Retail-analytics-recommendations"><img src="./assets/projects/salespulse.svg" width="49%" alt="SalesPulse AI — retail analytics dashboard" /></a>
-<a href="https://github.com/pranav2329h/TensorTonic-Solutions"><img src="./assets/projects/tensortonic.svg" width="49%" alt="TensorTonic Solutions — ML algorithms from scratch" /></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/titles/activity.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/titles/activity.svg" /><img src="./assets/dark/titles/activity.svg" width="100%" alt="05 · Contribution Matrix" /></picture>
 
-<br /><br />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/contrib-heatmap.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/contrib-heatmap.svg" /><img src="./assets/dark/contrib-heatmap.svg" width="100%" alt="Contribution matrix with yearly totals and streaks" /></picture>
 
-<img src="./assets/titles/activity.svg" width="100%" alt="04 — Activity: Contribution Matrix" />
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/pranav2329h/pranav2329h/output/snake-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/pranav2329h/pranav2329h/output/snake-light.svg" /><img src="https://raw.githubusercontent.com/pranav2329h/pranav2329h/output/snake-dark.svg" width="100%" alt="Snake eating my contribution graph" /></picture>
 
-<img src="./assets/contrib-heatmap.svg" width="100%" alt="Contribution matrix with yearly totals and streaks" />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/titles/insights.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/titles/insights.svg" /><img src="./assets/dark/titles/insights.svg" width="100%" alt="06 · GitHub Analytics" /></picture>
 
-<img src="https://raw.githubusercontent.com/pranav2329h/pranav2329h/output/snake-gold.svg" width="100%" alt="Snake eating my contribution graph" />
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=pranav2329h&show_icons=true&hide_rank=true&include_all_commits=true&bg_color=0D1117&title_color=22D3EE&icon_color=A78BFA&text_color=E6EDF3&border_color=30363D&border_radius=14" /><source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=pranav2329h&show_icons=true&hide_rank=true&include_all_commits=true&bg_color=FFFFFF&title_color=0891B2&icon_color=7C3AED&text_color=1F2328&border_color=D0D7DE&border_radius=14" /><img src="https://github-readme-stats.vercel.app/api?username=pranav2329h&show_icons=true&hide_rank=true&include_all_commits=true&bg_color=0D1117&title_color=22D3EE&icon_color=A78BFA&text_color=E6EDF3&border_color=30363D&border_radius=14" width="49%" alt="GitHub stats" /></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=pranav2329h&layout=compact&langs_count=8&bg_color=0D1117&title_color=22D3EE&text_color=E6EDF3&border_color=30363D&border_radius=14" /><source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=pranav2329h&layout=compact&langs_count=8&bg_color=FFFFFF&title_color=0891B2&text_color=1F2328&border_color=D0D7DE&border_radius=14" /><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pranav2329h&layout=compact&langs_count=8&bg_color=0D1117&title_color=22D3EE&text_color=E6EDF3&border_color=30363D&border_radius=14" width="49%" alt="Top languages" /></picture>
 
-<br />
-
-<img src="./assets/titles/insights.svg" width="100%" alt="05 — Insights: GitHub Analytics" />
-
-<img src="https://github-readme-stats.vercel.app/api?username=pranav2329h&show_icons=true&hide_rank=true&include_all_commits=true&bg_color=0B0B0F&title_color=D4AF37&icon_color=D4AF37&text_color=EDE6D6&border_color=2A2418&border_radius=14" width="49%" alt="GitHub stats" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pranav2329h&layout=compact&langs_count=8&bg_color=0B0B0F&title_color=D4AF37&text_color=EDE6D6&border_color=2A2418&border_radius=14" width="49%" alt="Top languages" />
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=pranav2329h&bg_color=0B0B0F&color=D4AF37&title_color=D4AF37&line=D4AF37&point=F3D98B&area=true&area_color=8C6A1F&hide_border=true&radius=14&custom_title=Commit%20Velocity" width="100%" alt="Contribution activity graph" />
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=pranav2329h&bg_color=0D1117&color=E6EDF3&title_color=22D3EE&line=A78BFA&point=22D3EE&area=true&area_color=22D3EE&hide_border=true&radius=14&custom_title=Commit+Velocity" /><source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=pranav2329h&bg_color=FFFFFF&color=1F2328&title_color=0891B2&line=7C3AED&point=0891B2&area=true&area_color=0891B2&hide_border=true&radius=14&custom_title=Commit+Velocity" /><img src="https://github-readme-activity-graph.vercel.app/graph?username=pranav2329h&bg_color=0D1117&color=E6EDF3&title_color=22D3EE&line=A78BFA&point=22D3EE&area=true&area_color=22D3EE&hide_border=true&radius=14&custom_title=Commit+Velocity" width="100%" alt="Contribution activity graph" /></picture>
 
 <a href="https://github.com/pranav2329h/TensorTonic-Solutions"><img src="https://www.tensortonic.com/api/badge/pranav2329h.svg" width="60%" alt="TensorTonic verified ML solutions" /></a>
 
-<br /><br />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/titles/connect.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/titles/connect.svg" /><img src="./assets/dark/titles/connect.svg" width="100%" alt="07 · Let’s Build Together" /></picture>
 
-<img src="./assets/titles/connect.svg" width="100%" alt="06 — Connect: Let’s Build Together" />
+<p>Open to <b>AI/ML</b>, <b>full-stack</b> and <b>DevOps</b> roles, internships and collaborations.<br />
+The fastest way to reach me is <a href="mailto:pranav2329h@gmail.com">pranav2329h@gmail.com</a>.</p>
 
-<p>
-  Open to <b>AI/ML</b>, <b>full-stack</b> and <b>DevOps</b> roles, internships and collaborations.<br />
-  The fastest way to reach me is <a href="mailto:pranav2329h@gmail.com">pranav2329h@gmail.com</a>.
-</p>
+<p><a href="https://pranav-hydrabade.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-Visit-22D3EE?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0D1117" alt="Portfolio" /></a> <a href="https://www.linkedin.com/in/pranav-hydrabade-10952a255"><img src="https://img.shields.io/badge/LinkedIn-Connect-22D3EE?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0D1117" alt="LinkedIn" /></a> <a href="mailto:pranav2329h@gmail.com"><img src="https://img.shields.io/badge/Email-Say%20hello-22D3EE?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0D1117" alt="Email" /></a></p>
 
-<p>
-  <a href="https://pranav-hydrabade.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-0B0B0F?style=for-the-badge&logo=vercel&logoColor=D4AF37" alt="Portfolio" /></a>
-  <a href="https://www.linkedin.com/in/pranav-hydrabade-10952a255"><img src="https://img.shields.io/badge/LinkedIn-0B0B0F?style=for-the-badge&logo=linkedin&logoColor=D4AF37" alt="LinkedIn" /></a>
-  <a href="mailto:pranav2329h@gmail.com"><img src="https://img.shields.io/badge/Gmail-0B0B0F?style=for-the-badge&logo=gmail&logoColor=D4AF37" alt="Email" /></a>
-  <a href="https://github.com/pranav2329h?tab=repositories"><img src="https://img.shields.io/badge/All_Repositories-0B0B0F?style=for-the-badge&logo=github&logoColor=D4AF37" alt="Repositories" /></a>
-</p>
-
-<img src="./assets/footer.svg" width="100%" alt="Thanks for visiting — system status online" />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/footer.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/footer.svg" /><img src="./assets/dark/footer.svg" width="100%" alt="Thanks for visiting — system status online" /></picture>
 
 </div>

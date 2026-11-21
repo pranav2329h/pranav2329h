@@ -1,179 +1,232 @@
 #!/usr/bin/env python3
-"""Generate the brand SVGs: hero header, section titles, divider and footer."""
+"""Generate the brand SVGs: hero header, section titles and footer."""
 import random
 
-from theme import (BG, GOLD, GOLD_DEEP, GOLD_LIGHT, IVORY, LINE, MONO, MUTED, SANS, SERIF,
-                   esc, gold_gradient, load_profile, svg_open, write_svg)
+from contrib_stats import compute_stats
+from theme import MONO, SANS, THEMES, esc, load_json, load_profile, neon_gradient, svg_open, write_svg
 
 W = 1200
 
 SECTIONS = [
-    ("about", "01", "ABOUT", "The Engineer"),
-    ("arsenal", "02", "ARSENAL", "Tech Arsenal"),
-    ("work", "03", "PORTFOLIO", "Featured Work"),
-    ("activity", "04", "ACTIVITY", "Contribution Matrix"),
-    ("insights", "05", "INSIGHTS", "GitHub Analytics"),
-    ("connect", "06", "CONNECT", "Let’s Build Together"),
+    ("about", "01", "about.md", "The Engineer"),
+    ("terminal", "02", "whoami.sh", "Live Terminal"),
+    ("arsenal", "03", "stack.json", "Tech Arsenal"),
+    ("work", "04", "projects/", "Featured Work"),
+    ("activity", "05", "git log", "Contribution Matrix"),
+    ("insights", "06", "analytics.py", "GitHub Analytics"),
+    ("connect", "07", "contact.sh", "Let’s Build Together"),
 ]
 
+RAIN_CHARS = "01{}[]<>/=;:$#*+-~ABCDEF0123456789"
 
-def corner(x, y, sx, sy):
-    """Art-deco corner ornament; sx/sy flip it into each corner."""
-    d1 = f"M{x} {y + sy * 46} V{y} H{x + sx * 46}"
-    d2 = f"M{x + sx * 8} {y + sy * 30} V{y + sy * 8} H{x + sx * 30}"
-    dx, dy = x + sx * 16, y + sy * 16
-    diamond = f"M{dx} {dy - 4} L{dx + 4} {dy} L{dx} {dy + 4} L{dx - 4} {dy} Z"
+
+def typed_clip(cid, x, y, h, full_w, chars, start, step, dur):
+    """clipPath whose width grows one character at a time (discrete SMIL steps)."""
+    times, vals = ["0"], ["0"]
+    for i in range(1, chars + 1):
+        times.append(f"{(start + i * step) / dur:.4f}")
+        vals.append(f"{full_w * i / chars:.1f}")
     return (
-        f'<path d="{d1}" fill="none" stroke="{GOLD}" stroke-width="1.4"/>'
-        f'<path d="{d2}" fill="none" stroke="{GOLD}" stroke-opacity="0.55" stroke-width="1"/>'
-        f'<path d="{diamond}" fill="{GOLD}"/>'
+        f'<clipPath id="{cid}"><rect x="{x}" y="{y}" width="0" height="{h}">'
+        f'<animate attributeName="width" dur="{dur}s" fill="freeze" calcMode="discrete" '
+        f'keyTimes="{";".join(times)}" values="{";".join(vals)}"/></rect></clipPath>'
     )
 
 
-def ornament(cx, y, half, cls=""):
-    """Two hairlines meeting at a central diamond."""
-    return (
-        f'<g class="{cls}">'
-        f'<line x1="{cx - half}" y1="{y}" x2="{cx - 14}" y2="{y}" stroke="url(#fadeL)" stroke-width="1.2"/>'
-        f'<line x1="{cx + 14}" y1="{y}" x2="{cx + half}" y2="{y}" stroke="url(#fadeR)" stroke-width="1.2"/>'
-        f'<path d="M{cx} {y - 6} L{cx + 6} {y} L{cx} {y + 6} L{cx - 6} {y} Z" fill="{GOLD}"/>'
-        f'<path d="M{cx} {y - 11} L{cx + 11} {y} L{cx} {y + 11} L{cx - 11} {y} Z" fill="none" '
-        f'stroke="{GOLD}" stroke-opacity="0.5"/>'
-        f"</g>"
-    )
+def corner_brackets(t, x, y, w, h, size=26):
+    s = size
+    paths = [
+        f"M{x} {y + s} V{y} H{x + s}", f"M{x + w - s} {y} H{x + w} V{y + s}",
+        f"M{x} {y + h - s} V{y + h} H{x + s}", f"M{x + w - s} {y + h} H{x + w} V{y + h - s}",
+    ]
+    return "".join(f'<path d="{d}" fill="none" stroke="{t.c1}" stroke-width="2"/>' for d in paths)
 
 
-FADES = (
-    f'<linearGradient id="fadeL" x1="0" x2="1"><stop offset="0" stop-color="{GOLD}" stop-opacity="0"/>'
-    f'<stop offset="1" stop-color="{GOLD}"/></linearGradient>'
-    f'<linearGradient id="fadeR" x1="0" x2="1"><stop offset="0" stop-color="{GOLD}"/>'
-    f'<stop offset="1" stop-color="{GOLD}" stop-opacity="0"/></linearGradient>'
-)
-
-
-def header(profile):
-    H = 420
-    cx, cy = W / 2, 205
+def header(t, profile, stats):
+    H = 440
+    cx = W / 2
     rng = random.Random(2329)
-    particles = []
-    for i in range(26):
-        x, y = rng.uniform(60, W - 60), rng.uniform(50, H - 50)
-        r = rng.choice([1, 1.2, 1.5, 2])
-        dur, delay = rng.uniform(5, 10), rng.uniform(0, 6)
-        particles.append(
-            f'<circle class="p" cx="{x:.1f}" cy="{y:.1f}" r="{r}" fill="{GOLD_LIGHT}" '
-            f'style="animation-duration:{dur:.1f}s;animation-delay:-{delay:.1f}s"/>'
+
+    rain = []
+    for i, x in enumerate(range(30, W, 46)):
+        chars = "".join(rng.choice(RAIN_CHARS) for _ in range(26))
+        tspans = "".join(f'<tspan x="{x}" dy="18">{esc(c)}</tspan>' for c in chars)
+        dur, delay = rng.uniform(9, 18), rng.uniform(0, 18)
+        color = t.c1 if i % 3 else t.c2
+        rain.append(
+            f'<text class="rain" y="-470" style="fill:{color};animation-duration:{dur:.1f}s;'
+            f'animation-delay:-{delay:.1f}s">{tspans}</text>'
         )
-    subtitle = f"{profile['headline'].upper()}  ·  {profile['location'].upper()}"
+
+    # rotating roles: each visible for an equal slice of the cycle
+    roles = profile["roles"]
+    n, cycle = len(roles), 3.2 * len(roles)
+    slice_pct = 100 / n
+    role_css, role_svg = [], []
+    for i, role in enumerate(roles):
+        a = i * slice_pct
+        b = a + slice_pct
+        role_css.append(
+            f"@keyframes role{i}{{0%,{max(a - 0.01, 0):.2f}%{{opacity:0;transform:translateY(12px)}}"
+            f"{a + 3:.2f}%,{b - 4:.2f}%{{opacity:1;transform:none}}{b:.2f}%,100%{{opacity:0;transform:translateY(-12px)}}}}"
+            f".role{i}{{animation:role{i} {cycle:.1f}s ease-in-out infinite}}"
+        )
+        role_svg.append(
+            f'<text class="role role{i}" x="{cx}" y="300" text-anchor="middle">'
+            f'<tspan style="fill:{t.c1}">&lt;</tspan> {esc(role)} <tspan style="fill:{t.c1}">/&gt;</tspan></text>'
+        )
+
+    prompt = f"./init.sh --user {profile['handle']}"
+    prompt_w = (len(prompt) + 2) * 9.0  # 15px monospace glyphs are ~0.6em wide
+    prompt_x = cx - prompt_w / 2
+    chips = [
+        (t.ok, "Open to opportunities"),
+        (t.c2, profile["location"]),
+        (t.c3, f"{stats['total']:,} contributions / year" if stats else f"Building since {profile['since']}"),
+    ]
+    chip_w = [len(label) * 8.2 + 46 for _, label in chips]
+    x = cx - (sum(chip_w) + 16 * (len(chips) - 1)) / 2
+    chip_svg = []
+    for (color, label), w in zip(chips, chip_w):
+        chip_svg.append(
+            f'<rect x="{x:.0f}" y="342" width="{w:.0f}" height="34" rx="17" fill="{t.panel}" stroke="{t.line}"/>'
+            f'<circle class="pulse" cx="{x + 20:.0f}" cy="359" r="5" fill="{color}"/>'
+            f'<text class="chip" x="{x + 34:.0f}" y="364">{esc(label)}</text>'
+        )
+        x += w + 16
+
     return [
         svg_open(W, H, f"{profile['name']} — {profile['headline']}"),
         "<defs>",
-        gold_gradient("goldShimmer", shimmer=True, dur="7s"),
-        FADES,
-        f'<radialGradient id="glow" cx="0.5" cy="0.48" r="0.55"><stop offset="0" stop-color="{GOLD}" stop-opacity="0.20"/>'
-        f'<stop offset="0.6" stop-color="{GOLD}" stop-opacity="0.04"/><stop offset="1" stop-color="{GOLD}" stop-opacity="0"/></radialGradient>',
-        f'<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">'
-        f'<path d="M40 0H0V40" fill="none" stroke="{LINE}" stroke-width="1"/></pattern>',
-        '<radialGradient id="gridFade" cx="0.5" cy="0.5" r="0.6"><stop offset="0" stop-color="#fff" stop-opacity="0.9"/>'
-        '<stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>',
-        f'<mask id="gridMask"><rect width="{W}" height="{H}" fill="url(#gridFade)"/></mask>',
+        neon_gradient(t, "neon", dur="5s"),
+        f'<radialGradient id="g1"><stop offset="0" stop-color="{t.c1}" stop-opacity="{t.glow}"/>'
+        f'<stop offset="1" stop-color="{t.c1}" stop-opacity="0"/></radialGradient>',
+        f'<radialGradient id="g2"><stop offset="0" stop-color="{t.c2}" stop-opacity="{t.glow}"/>'
+        f'<stop offset="1" stop-color="{t.c2}" stop-opacity="0"/></radialGradient>',
+        f'<pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">'
+        f'<path d="M44 0H0V44" fill="none" stroke="{t.line}" stroke-width="1"/></pattern>',
+        '<linearGradient id="vfade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/>'
+        '<stop offset=".3" stop-color="#fff" stop-opacity="1"/><stop offset=".7" stop-color="#fff" stop-opacity="1"/>'
+        '<stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>',
+        f'<mask id="fade"><rect width="{W}" height="{H}" fill="url(#vfade)"/></mask>',
+        typed_clip("typed", prompt_x, 92, 30, prompt_w + 4, len(prompt) + 2, 0.4, 0.055, 3.2),
         "</defs>",
         "<style>",
-        f".eyebrow{{font:600 13px {MONO};letter-spacing:6px;fill:{GOLD}}}",
-        f".name{{font:400 76px {SERIF};letter-spacing:10px;fill:url(#goldShimmer)}}",
-        f".sub{{font:500 15px {SANS};letter-spacing:7px;fill:{IVORY};fill-opacity:.82}}",
-        f".handle{{font:500 13px {MONO};letter-spacing:3px;fill:{MUTED}}}",
-        "@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}",
-        "@keyframes draw{from{stroke-dashoffset:600}to{stroke-dashoffset:0}}",
-        "@keyframes spin{to{transform:rotate(360deg)}}",
-        "@keyframes twinkle{0%,100%{opacity:.08;transform:translateY(0)}50%{opacity:.9;transform:translateY(-16px)}}",
-        "@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}",
-        ".a1{animation:rise 1s ease-out .1s both}.a2{animation:rise 1.2s ease-out .35s both}",
-        ".a3{animation:rise 1s ease-out .8s both}.a4{animation:rise 1s ease-out 1.1s both}",
-        f".ring{{transform-origin:{cx}px {cy}px;animation:spin 80s linear infinite}}",
-        f".ring2{{transform-origin:{cx}px {cy}px;animation:spin 120s linear infinite reverse}}",
-        ".p{animation:twinkle 7s ease-in-out infinite}",
-        ".dot{animation:pulse 2.4s ease-in-out infinite}",
+        f".rain{{font:500 14px {MONO};opacity:.16;animation:fall 12s linear infinite}}",
+        f"@keyframes fall{{from{{transform:translateY(0)}}to{{transform:translateY({H + 480}px)}}}}",
+        f".name{{font:800 84px {SANS};letter-spacing:1px}}",
+        f".role{{font:600 22px {MONO};fill:{t.text};opacity:0}}",
+        f".prompt{{font:500 15px {MONO};fill:{t.muted}}}",
+        f".chip{{font:600 14px {MONO};fill:{t.text}}}",
+        "@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,-30px)}}",
+        ".drift1{animation:drift 14s ease-in-out infinite}.drift2{animation:drift 18s ease-in-out infinite reverse}",
+        "@keyframes glitchA{0%,90%,100%{opacity:0;transform:none}91%{opacity:.85;transform:translate(-5px,2px)}"
+        "92.5%{opacity:.85;transform:translate(4px,-2px)}94%{opacity:0}}",
+        "@keyframes glitchB{0%,90%,100%{opacity:0;transform:none}91%{opacity:.85;transform:translate(5px,-2px)}"
+        "92.5%{opacity:.85;transform:translate(-4px,1px)}94%{opacity:0}}",
+        ".gA{animation:glitchA 7s steps(1) infinite}.gB{animation:glitchB 7s steps(1) infinite}",
+        "@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}",
+        ".in{animation:rise 1s cubic-bezier(.2,.8,.2,1) .2s both}",
+        "@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}.pulse{animation:pulse 1.8s ease-in-out infinite}",
+        "@keyframes blink{50%{opacity:0}}.cur{animation:blink 1s steps(1) infinite}",
+        *role_css,
         "</style>",
-        f'<rect width="{W}" height="{H}" fill="{BG}"/>',
-        f'<rect width="{W}" height="{H}" fill="url(#grid)" mask="url(#gridMask)" opacity="0.55"/>',
-        f'<rect width="{W}" height="{H}" fill="url(#glow)"/>',
-        f'<circle class="ring" cx="{cx}" cy="{cy}" r="178" fill="none" stroke="{GOLD}" stroke-opacity="0.16" stroke-dasharray="2 10"/>',
-        f'<circle class="ring2" cx="{cx}" cy="{cy}" r="196" fill="none" stroke="{GOLD}" stroke-opacity="0.10" stroke-dasharray="60 18 4 18"/>',
-        *particles,
-        f'<rect x="22" y="22" width="{W - 44}" height="{H - 44}" fill="none" stroke="{GOLD}" stroke-opacity="0.22"/>',
-        corner(22, 22, 1, 1), corner(W - 22, 22, -1, 1), corner(22, H - 22, 1, -1), corner(W - 22, H - 22, -1, -1),
-        f'<text class="eyebrow a1" x="{cx}" y="118" text-anchor="middle">{esc(profile["eyebrow"])}</text>',
-        f'<text class="name a2" x="{cx}" y="{cy + 22}" text-anchor="middle" textLength="920" lengthAdjust="spacingAndGlyphs">'
-        f'{esc(profile["name"].upper())}</text>',
-        ornament(cx, 262, 230, "a3"),
-        f'<text class="sub a3" x="{cx}" y="308" text-anchor="middle">{esc(subtitle)}</text>',
-        f'<g class="a4"><circle class="dot" cx="{cx - 92}" cy="345" r="4" fill="{GOLD_LIGHT}"/>'
-        f'<text class="handle" x="{cx - 80}" y="350">@{esc(profile["handle"])} · ONLINE</text></g>',
+        f'<rect width="{W}" height="{H}" rx="18" fill="{t.bg}"/>',
+        f'<rect width="{W}" height="{H}" rx="18" fill="url(#grid)" opacity=".5"/>',
+        f'<circle class="drift1" cx="230" cy="120" r="320" fill="url(#g1)"/>',
+        f'<circle class="drift2" cx="980" cy="330" r="340" fill="url(#g2)"/>',
+        f'<g mask="url(#fade)">{"".join(rain)}</g>',
+        corner_brackets(t, 24, 24, W - 48, H - 48),
+        f'<text class="prompt" x="{prompt_x:.0f}" y="112" clip-path="url(#typed)">'
+        f'<tspan style="fill:{t.c1}">❯</tspan> {esc(prompt)}</text>',
+        f'<rect class="cur" x="{prompt_x + prompt_w + 6:.0f}" y="98" width="9" height="18" fill="{t.c1}"/>',
+        f'<g class="in">',
+        f'<text class="name gA" x="{cx}" y="222" text-anchor="middle" textLength="880" lengthAdjust="spacingAndGlyphs" style="fill:{t.c1}">{esc(profile["name"].upper())}</text>',
+        f'<text class="name gB" x="{cx}" y="222" text-anchor="middle" textLength="880" lengthAdjust="spacingAndGlyphs" style="fill:{t.c3}">{esc(profile["name"].upper())}</text>',
+        f'<text class="name" x="{cx}" y="222" text-anchor="middle" textLength="880" lengthAdjust="spacingAndGlyphs" fill="url(#neon)">{esc(profile["name"].upper())}</text>',
+        "</g>",
+        *role_svg,
+        *chip_svg,
         "</svg>",
     ]
 
 
-def section_title(num, eyebrow, title):
-    H = 120
+def section_title(t, num, file, title):
+    H = 130
     cx = W / 2
+    bar = 260
     return [
         svg_open(W, H, title),
-        f"<defs>{gold_gradient('g', shimmer=True, dur='9s')}{FADES}</defs>",
+        f"<defs>{neon_gradient(t, 'neon', dur='6s')}"
+        f'<filter id="blur" x="-50%" y="-200%" width="200%" height="500%"><feGaussianBlur stdDeviation="4"/></filter></defs>',
         "<style>",
-        f".n{{font:600 13px {MONO};letter-spacing:6px;fill:{GOLD}}}",
-        f".t{{font:400 44px {SERIF};letter-spacing:3px;fill:url(#g)}}",
+        f".n{{font:600 15px {MONO};fill:{t.muted}}}",
+        f".t{{font:800 46px {SANS};letter-spacing:.5px}}",
+        "@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}",
+        f".bar{{transform-origin:{cx}px 0;animation:grow 1.2s cubic-bezier(.2,.8,.2,1) both}}",
+        f"@keyframes travel{{0%,100%{{transform:translateX(-{bar / 2 - 6}px)}}50%{{transform:translateX({bar / 2 - 6}px)}}}}",
+        ".dot{animation:travel 3.2s ease-in-out infinite}",
+        "@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}.in{animation:rise .9s ease-out both}",
         "</style>",
-        f'<text class="n" x="{cx}" y="26" text-anchor="middle">{num}  —  {esc(eyebrow)}</text>',
-        f'<text class="t" x="{cx}" y="82" text-anchor="middle">{esc(title)}</text>',
-        ornament(cx, 106, 170),
+        f'<text class="n in" x="{cx}" y="28" text-anchor="middle"><tspan style="fill:{t.c1}">//</tspan> {num} '
+        f'<tspan style="fill:{t.c2}">·</tspan> {esc(file)}</text>',
+        f'<text class="t in" x="{cx}" y="86" text-anchor="middle" fill="url(#neon)">{esc(title)}</text>',
+        f'<rect class="bar" x="{cx - bar / 2}" y="108" width="{bar}" height="4" rx="2" fill="url(#neon)"/>',
+        f'<g class="dot"><circle cx="{cx}" cy="110" r="9" fill="{t.c1}" opacity=".6" filter="url(#blur)"/>'
+        f'<circle cx="{cx}" cy="110" r="4" fill="{t.bg}" stroke="{t.c1}" stroke-width="2"/></g>',
         "</svg>",
     ]
 
 
-def divider():
-    return [
-        svg_open(W, 30, "divider"),
-        f"<defs>{FADES}</defs>",
-        ornament(W / 2, 15, 560),
-        "</svg>",
-    ]
-
-
-def footer(profile):
-    H = 230
+def footer(t, profile):
+    H = 250
     cx = W / 2
+
+    def wave(amp, length, y):
+        d = f"M0 {y}"
+        for x in range(0, W * 2 + length, length):
+            d += f" q{length / 4} {-amp} {length / 2} 0 t{length / 2} 0"
+        return d
+
+    msg = "exit 0  # see you in the next commit"
+    msg_w = (len(msg) + 2) * 9.6
+    msg_x = cx - msg_w / 2
     return [
         svg_open(W, H, "Thanks for visiting"),
-        f"<defs>{gold_gradient('g', shimmer=True, dur='8s')}{FADES}"
-        f'<linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{GOLD}" stop-opacity="0"/>'
-        f'<stop offset="1" stop-color="{GOLD}" stop-opacity="0.10"/></linearGradient></defs>',
+        f"<defs>{neon_gradient(t, 'neon', dur='6s')}"
+        + typed_clip("typed", msg_x, 120, 30, msg_w + 4, len(msg) + 2, 0.8, 0.06, 4)
+        + "</defs>",
         "<style>",
-        f".t{{font:italic 400 38px {SERIF};fill:url(#g)}}",
-        f".s{{font:500 12px {MONO};letter-spacing:5px;fill:{MUTED}}}",
-        f".k{{font:600 12px {MONO};letter-spacing:4px;fill:{GOLD}}}",
-        "@keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}.dot{animation:pulse 2.4s ease-in-out infinite}",
+        f".t{{font:800 44px {SANS}}}",
+        f".m{{font:500 16px {MONO};fill:{t.muted}}}",
+        f".k{{font:700 13px {MONO};fill:{t.text};letter-spacing:2px}}",
+        f"@keyframes slide{{from{{transform:translateX(0)}}to{{transform:translateX(-{W}px)}}}}",
+        ".w1{animation:slide 14s linear infinite}.w2{animation:slide 20s linear infinite}",
+        "@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}.pulse{animation:pulse 1.8s ease-in-out infinite}",
+        "@keyframes blink{50%{opacity:0}}.cur{animation:blink 1s steps(1) infinite}",
         "</style>",
-        f'<rect width="{W}" height="{H}" rx="18" fill="{BG}"/>',
-        f'<rect width="{W}" height="{H}" rx="18" fill="url(#floor)"/>',
-        f'<rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="18" fill="none" stroke="{LINE}"/>',
-        ornament(cx, 44, 260),
-        f'<text class="t" x="{cx}" y="112" text-anchor="middle">Thanks for visiting</text>',
-        f'<text class="s" x="{cx}" y="150" text-anchor="middle">BUILT WITH CODE, CURIOSITY &amp; COFFEE</text>',
-        f'<circle class="dot" cx="{cx - 186}" cy="185" r="4" fill="{GOLD_LIGHT}"/>',
-        f'<text class="k" x="{cx + 8}" y="189" text-anchor="middle">SYSTEM STATUS: ONLINE'
-        f'<tspan style="fill:{MUTED}">   [ OK ]</tspan></text>',
+        f'<rect width="{W}" height="{H}" rx="18" fill="{t.bg}" stroke="{t.line}"/>',
+        f'<clipPath id="card"><rect width="{W}" height="{H}" rx="18"/></clipPath>',
+        f'<g clip-path="url(#card)" opacity=".55">'
+        f'<path class="w1" d="{wave(14, 300, 214)}" fill="none" stroke="{t.c1}" stroke-width="2"/>'
+        f'<path class="w2" d="{wave(10, 400, 226)}" fill="none" stroke="{t.c2}" stroke-width="2"/></g>',
+        f'<text class="t" x="{cx}" y="86" text-anchor="middle" fill="url(#neon)">Thanks for visiting</text>',
+        f'<text class="m" x="{msg_x:.0f}" y="141" clip-path="url(#typed)"><tspan style="fill:{t.c1}">❯</tspan> {esc(msg)}</text>',
+        f'<rect class="cur" x="{msg_x + msg_w + 6:.0f}" y="127" width="9" height="18" fill="{t.c1}"/>',
+        f'<circle class="pulse" cx="{cx - 112}" cy="179" r="5" fill="{t.ok}"/>',
+        f'<text class="k" x="{cx - 98}" y="184">SYSTEM STATUS: ONLINE</text>',
         "</svg>",
     ]
 
 
 def main():
     profile = load_profile()
-    write_svg("header.svg", header(profile))
-    write_svg("divider.svg", divider())
-    write_svg("footer.svg", footer(profile))
-    for slug, num, eyebrow, title in SECTIONS:
-        write_svg(f"titles/{slug}.svg", section_title(num, eyebrow, title))
+    stats = compute_stats(load_json("contributions.json"))
+    for t in THEMES:
+        write_svg(t, "header.svg", header(t, profile, stats))
+        write_svg(t, "footer.svg", footer(t, profile))
+        for slug, num, file, title in SECTIONS:
+            write_svg(t, f"titles/{slug}.svg", section_title(t, num, file, title))
 
 
 if __name__ == "__main__":
