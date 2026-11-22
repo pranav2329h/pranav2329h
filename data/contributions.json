@@ -1,51 +1,16 @@
 {
   "username": "pranav2329h",
-  "fetched_at": "2026-11-21T14:41:49Z",
-  "total": 452,
-  "day_count": 371,
+  "fetched_at": "2026-11-22T04:52:21Z",
+  "total": 454,
+  "day_count": 365,
   "level_counts": [
-    245,
+    240,
     92,
-    26,
+    25,
     4,
     4
   ],
   "days": [
-    {
-      "date": "2025-11-16",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-11-17",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-11-18",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-11-19",
-      "level": 2,
-      "count": 6
-    },
-    {
-      "date": "2025-11-20",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-11-21",
-      "level": 1,
-      "count": 2
-    },
-    {
-      "date": "2025-11-22",
-      "level": 0,
-      "count": 0
-    },
     {
       "date": "2025-11-23",
       "level": 1,
@@ -1864,7 +1829,12 @@
     {
       "date": "2026-11-21",
       "level": 4,
-      "count": 15
+      "count": 16
+    },
+    {
+      "date": "2026-11-22",
+      "level": 1,
+      "count": 1
     }
   ]
 }
