@@ -15,9 +15,11 @@
 <img src="https://komarev.com/ghpvc/?username=pranav2329h&label=Profile+Views&color=22D3EE&style=for-the-badge" alt="Profile views" />
 </p>
 
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/marquee.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/marquee.svg" /><img src="./assets/dark/marquee.svg" width="100%" alt="Scrolling ticker of skills and values" /></picture>
+
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/titles/about.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/titles/about.svg" /><img src="./assets/dark/titles/about.svg" width="100%" alt="01 · The Engineer" /></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/info-card.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/info-card.svg" /><img src="./assets/dark/info-card.svg" width="100%" alt="Identity card with animated portrait and quick facts" /></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/info-card.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/info-card.svg" /><img src="./assets/dark/info-card.svg" width="100%" alt="Identity card: my photo animates from 8-bit pixel art to hi-res to ASCII, next to quick facts" /></picture>
 
 <p><em>I build intelligent systems end to end, from training explainable ML models<br />
 to shipping them behind clean React interfaces on containerised AWS infrastructure.</em></p>
@@ -57,13 +59,19 @@ to shipping them behind clean React interfaces on containerised AWS infrastructu
 <a href="https://github.com/pranav2329h/SalesPulse-AI-Retail-analytics-recommendations"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/projects/salespulse.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/projects/salespulse.svg" /><img src="./assets/dark/projects/salespulse.svg" width="49%" alt="SalesPulse AI — Retail analytics dashboard" /></picture></a>
 <a href="https://github.com/pranav2329h/TensorTonic-Solutions"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/projects/tensortonic.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/projects/tensortonic.svg" /><img src="./assets/dark/projects/tensortonic.svg" width="49%" alt="TensorTonic Solutions — ML algorithms from scratch" /></picture></a>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/titles/activity.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/titles/activity.svg" /><img src="./assets/dark/titles/activity.svg" width="100%" alt="05 · Contribution Matrix" /></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/titles/journey.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/titles/journey.svg" /><img src="./assets/dark/titles/journey.svg" width="100%" alt="05 · The Journey" /></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/contrib-heatmap.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/contrib-heatmap.svg" /><img src="./assets/dark/contrib-heatmap.svg" width="100%" alt="Contribution matrix with yearly totals and streaks" /></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/timeline.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/timeline.svg" /><img src="./assets/dark/timeline.svg" width="100%" alt="Animated timeline from joining GitHub to today" /></picture>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/titles/activity.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/titles/activity.svg" /><img src="./assets/dark/titles/activity.svg" width="100%" alt="06 · Contribution Matrix" /></picture>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/contrib-heatmap.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/contrib-heatmap.svg" /><img src="./assets/dark/contrib-heatmap.svg" width="100%" alt="Contribution matrix with rolling counters, yearly totals and streaks" /></picture>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/feed.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/feed.svg" /><img src="./assets/dark/feed.svg" width="100%" alt="Live feed of my latest commits, scrolling" /></picture>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/pranav2329h/pranav2329h/output/snake-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/pranav2329h/pranav2329h/output/snake-light.svg" /><img src="https://raw.githubusercontent.com/pranav2329h/pranav2329h/output/snake-dark.svg" width="100%" alt="Snake eating my contribution graph" /></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/titles/insights.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/titles/insights.svg" /><img src="./assets/dark/titles/insights.svg" width="100%" alt="06 · GitHub Analytics" /></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/titles/insights.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/titles/insights.svg" /><img src="./assets/dark/titles/insights.svg" width="100%" alt="07 · GitHub Analytics" /></picture>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=pranav2329h&show_icons=true&hide_rank=true&include_all_commits=true&bg_color=0D1117&title_color=22D3EE&icon_color=A78BFA&text_color=E6EDF3&border_color=30363D&border_radius=14" /><source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=pranav2329h&show_icons=true&hide_rank=true&include_all_commits=true&bg_color=FFFFFF&title_color=0891B2&icon_color=7C3AED&text_color=1F2328&border_color=D0D7DE&border_radius=14" /><img src="https://github-readme-stats.vercel.app/api?username=pranav2329h&show_icons=true&hide_rank=true&include_all_commits=true&bg_color=0D1117&title_color=22D3EE&icon_color=A78BFA&text_color=E6EDF3&border_color=30363D&border_radius=14" width="49%" alt="GitHub stats" /></picture>
 <picture><source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=pranav2329h&layout=compact&langs_count=8&bg_color=0D1117&title_color=22D3EE&text_color=E6EDF3&border_color=30363D&border_radius=14" /><source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=pranav2329h&layout=compact&langs_count=8&bg_color=FFFFFF&title_color=0891B2&text_color=1F2328&border_color=D0D7DE&border_radius=14" /><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pranav2329h&layout=compact&langs_count=8&bg_color=0D1117&title_color=22D3EE&text_color=E6EDF3&border_color=30363D&border_radius=14" width="49%" alt="Top languages" /></picture>
@@ -72,7 +80,7 @@ to shipping them behind clean React interfaces on containerised AWS infrastructu
 
 <a href="https://github.com/pranav2329h/TensorTonic-Solutions"><img src="https://www.tensortonic.com/api/badge/pranav2329h.svg" width="60%" alt="TensorTonic verified ML solutions" /></a>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/titles/connect.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/titles/connect.svg" /><img src="./assets/dark/titles/connect.svg" width="100%" alt="07 · Let’s Build Together" /></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/titles/connect.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/light/titles/connect.svg" /><img src="./assets/dark/titles/connect.svg" width="100%" alt="08 · Let’s Build Together" /></picture>
 
 <p>Open to <b>AI/ML</b>, <b>full-stack</b> and <b>DevOps</b> roles, internships and collaborations.<br />
 The fastest way to reach me is <a href="mailto:pranav2329h@gmail.com">pranav2329h@gmail.com</a>.</p>

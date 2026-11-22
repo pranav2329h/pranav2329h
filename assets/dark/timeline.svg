@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-label="Journey: Oct 2023 Hello, GitHub; Oct 2025 SalesPulse AI; Jan 2026 Credisure; May 2026 TensorTonic Solutions; Jun 2026 CloudVault Pro; Oct 2026 Jenkins Auto-Rollback; TODAY Now"><title>Journey: Oct 2023 Hello, GitHub; Oct 2025 SalesPulse AI; Jan 2026 Credisure; May 2026 TensorTonic Solutions; Jun 2026 CloudVault Pro; Oct 2026 Jenkins Auto-Rollback; TODAY Now</title>
+<defs>
+<linearGradient id="neon" x1="0" y1="0" x2="1" y2="0" spreadMethod="repeat"><stop offset="0" stop-color="#22D3EE"/><stop offset="0.33" stop-color="#A78BFA"/><stop offset="0.66" stop-color="#F472B6"/><stop offset="1" stop-color="#22D3EE"/></linearGradient>
+<linearGradient id="axis" x1="160" x2="1040" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#22D3EE"/><stop offset=".5" stop-color="#A78BFA"/><stop offset="1" stop-color="#F472B6"/></linearGradient>
+<filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5"/></filter>
+</defs>
+<style>
+.date{font:700 13px 'SF Mono', 'JetBrains Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;letter-spacing:2px}
+.title{font:800 19px -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;fill:#E6EDF3}
+.sub{font:500 13px 'SF Mono', 'JetBrains Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;fill:#8B949E}
+@keyframes draw{from{stroke-dashoffset:880}to{stroke-dashoffset:0}}
+.line{stroke-dasharray:880;animation:draw 3.2s cubic-bezier(.45,0,.25,1) .3s both}
+@keyframes pop{0%{opacity:0;transform:scale(0)}70%{transform:scale(1.25)}100%{opacity:1;transform:none}}
+.node{transform-box:fill-box;transform-origin:center;animation:pop .6s ease-out both}
+@keyframes rise{from{opacity:0;transform:translateY(var(--d))}to{opacity:1;transform:none}}
+.lab{animation:rise .7s ease-out both}
+@keyframes ping{0%{transform:scale(1);opacity:.7}100%{transform:scale(3.2);opacity:0}}
+.ping{transform-box:fill-box;transform-origin:center;animation:ping 1.8s ease-out infinite}
+</style>
+<rect x="1" y="1" width="1198" height="328" rx="16" fill="#0D1117" stroke="#30363D"/>
+<line x1="160" y1="162" x2="1040" y2="162" stroke="#30363D" stroke-width="4" stroke-linecap="round"/>
+<line class="line" x1="160" y1="162" x2="1040" y2="162" stroke="url(#axis)" stroke-width="4" stroke-linecap="round"/>
+<circle r="6" fill="#22D3EE" filter="url(#glow)" opacity="0"><set attributeName="opacity" to="1" begin="3.7s"/><animateMotion path="M160 162 H1040" dur="4s" begin="3.7s" repeatCount="indefinite"/></circle>
+<line x1="160.0" y1="148" x2="160.0" y2="126" stroke="#30363D" stroke-width="2" stroke-dasharray="3 4"/>
+<circle class="node" cx="160.0" cy="162" r="11" fill="#0D1117" stroke="#22D3EE" stroke-width="4" style="animation-delay:0.30s"/>
+<g class="lab" style="--d:-12px;animation-delay:0.40s"><text class="date" x="160.0" y="70" text-anchor="middle" style="fill:#22D3EE">OCT 2023</text><text class="title" x="160.0" y="96" text-anchor="middle">Hello, GitHub</text><text class="sub" x="160.0" y="116" text-anchor="middle">first repo pushed</text></g>
+<line x1="306.66666666666663" y1="176" x2="306.66666666666663" y2="198" stroke="#30363D" stroke-width="2" stroke-dasharray="3 4"/>
+<circle class="node" cx="306.66666666666663" cy="162" r="11" fill="#0D1117" stroke="#A78BFA" stroke-width="4" style="animation-delay:0.83s"/>
+<g class="lab" style="--d:12px;animation-delay:0.93s"><text class="date" x="306.66666666666663" y="220" text-anchor="middle" style="fill:#A78BFA">OCT 2025</text><text class="title" x="306.66666666666663" y="246" text-anchor="middle">SalesPulse AI</text><text class="sub" x="306.66666666666663" y="266" text-anchor="middle">Retail analytics dashboard</text></g>
+<line x1="453.3333333333333" y1="148" x2="453.3333333333333" y2="126" stroke="#30363D" stroke-width="2" stroke-dasharray="3 4"/>
+<circle class="node" cx="453.3333333333333" cy="162" r="11" fill="#0D1117" stroke="#F472B6" stroke-width="4" style="animation-delay:1.37s"/>
+<g class="lab" style="--d:-12px;animation-delay:1.47s"><text class="date" x="453.3333333333333" y="70" text-anchor="middle" style="fill:#F472B6">JAN 2026</text><text class="title" x="453.3333333333333" y="96" text-anchor="middle">Credisure</text><text class="sub" x="453.3333333333333" y="116" text-anchor="middle">Explainable loan approval</text></g>
+<line x1="600.0" y1="176" x2="600.0" y2="198" stroke="#30363D" stroke-width="2" stroke-dasharray="3 4"/>
+<circle class="node" cx="600.0" cy="162" r="11" fill="#0D1117" stroke="#22D3EE" stroke-width="4" style="animation-delay:1.90s"/>
+<g class="lab" style="--d:12px;animation-delay:2.00s"><text class="date" x="600.0" y="220" text-anchor="middle" style="fill:#22D3EE">MAY 2026</text><text class="title" x="600.0" y="246" text-anchor="middle">TensorTonic Solutions</text><text class="sub" x="600.0" y="266" text-anchor="middle">ML algorithms from scratch</text></g>
+<line x1="746.6666666666666" y1="148" x2="746.6666666666666" y2="126" stroke="#30363D" stroke-width="2" stroke-dasharray="3 4"/>
+<circle class="node" cx="746.6666666666666" cy="162" r="11" fill="#0D1117" stroke="#A78BFA" stroke-width="4" style="animation-delay:2.43s"/>
+<g class="lab" style="--d:-12px;animation-delay:2.53s"><text class="date" x="746.6666666666666" y="70" text-anchor="middle" style="fill:#A78BFA">JUN 2026</text><text class="title" x="746.6666666666666" y="96" text-anchor="middle">CloudVault Pro</text><text class="sub" x="746.6666666666666" y="116" text-anchor="middle">Secure cloud storage &amp; collaboration</text></g>
+<line x1="893.3333333333333" y1="176" x2="893.3333333333333" y2="198" stroke="#30363D" stroke-width="2" stroke-dasharray="3 4"/>
+<circle class="node" cx="893.3333333333333" cy="162" r="11" fill="#0D1117" stroke="#F472B6" stroke-width="4" style="animation-delay:2.97s"/>
+<g class="lab" style="--d:12px;animation-delay:3.07s"><text class="date" x="893.3333333333333" y="220" text-anchor="middle" style="fill:#F472B6">OCT 2026</text><text class="title" x="893.3333333333333" y="246" text-anchor="middle">Jenkins Auto-Rollback</text><text class="sub" x="893.3333333333333" y="266" text-anchor="middle">Self-healing deployments</text></g>
+<line x1="1040.0" y1="148" x2="1040.0" y2="126" stroke="#30363D" stroke-width="2" stroke-dasharray="3 4"/>
+<circle class="ping" cx="1040.0" cy="162" r="10" fill="#3FB950" style="animation-delay:3.50s"/>
+<circle class="node" cx="1040.0" cy="162" r="11" fill="#0D1117" stroke="#3FB950" stroke-width="4" style="animation-delay:3.50s"/>
+<g class="lab" style="--d:-12px;animation-delay:3.60s"><text class="date" x="1040.0" y="70" text-anchor="middle" style="fill:#3FB950">TODAY</text><text class="title" x="1040.0" y="96" text-anchor="middle">Now</text><text class="sub" x="1040.0" y="116" text-anchor="middle">452 contributions this year</text></g>
+</svg>

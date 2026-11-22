@@ -3,13 +3,38 @@
 from datetime import date, timedelta
 
 from contrib_stats import compute_stats
-from theme import MONO, SANS, THEMES, esc, load_json, neon_gradient, svg_open, write_svg
+from theme import MONO, THEMES, esc, load_json, neon_gradient, svg_open, write_svg
 
 W = 1200
 CELL, GAP = 16, 4
 STEP = CELL + GAP
 GRID_TOP = 176
 MONTHS = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split()
+
+
+DIGIT_W, DIGIT_LH = 25, 48   # 42px monospace digit advance / roll line height
+
+
+def odometer(oid, value, cx, baseline, color, delay):
+    """Odometer-style counter: every digit spins a full turn then lands on its value."""
+    width = sum(DIGIT_W if ch.isdigit() else DIGIT_W * 0.55 for ch in value)
+    x = cx - width / 2
+    parts = []
+    for pos, ch in enumerate(value):
+        if not ch.isdigit():
+            parts.append(f'<text class="odo" x="{x:.1f}" y="{baseline}" style="fill:{color}">{esc(ch)}</text>')
+            x += DIGIT_W * 0.55
+            continue
+        seq = list(range(10)) + list(range(int(ch) + 1))      # one full spin, then up to the digit
+        col = "".join(f'<tspan x="{x:.1f}" y="{baseline + k * DIGIT_LH}">{d}</tspan>' for k, d in enumerate(seq))
+        dur = 1.4 + pos * 0.25
+        parts.append(
+            f'<clipPath id="{oid}d{pos}"><rect x="{x - 2:.1f}" y="{baseline - 40}" width="{DIGIT_W + 4}" height="{DIGIT_LH}"/></clipPath>'
+            f'<g clip-path="url(#{oid}d{pos})"><text class="odo roll" style="fill:{color};--to:-{(len(seq) - 1) * DIGIT_LH}px;'
+            f'animation-duration:{dur:.2f}s;animation-delay:{delay:.2f}s">{col}</text></g>'
+        )
+        x += DIGIT_W
+    return "".join(parts)
 
 
 def render(t, payload, stats):
@@ -38,7 +63,9 @@ def render(t, payload, stats):
         "<style>",
         f"text{{font-family:{MONO}}}",
         f".lbl{{font-size:11px;font-weight:700;fill:{t.muted};letter-spacing:2px}}",
-        f".val{{font:800 40px {SANS}}}",
+        f".odo{{font:800 42px {MONO}}}",
+        "@keyframes roll{from{transform:translateY(0)}to{transform:translateY(var(--to))}}",
+        ".roll{animation:roll 1.6s cubic-bezier(.15,.85,.25,1) both}",
         f".unit{{font-size:12px;fill:{t.muted}}}",
         f".axis{{font-size:12px;fill:{t.muted}}}",
         "@keyframes reveal{from{opacity:0;transform:scale(.3)}to{opacity:1;transform:none}}",
@@ -59,12 +86,13 @@ def render(t, payload, stats):
         ("BEST DAY", f"{stats['best_count']}", date.fromisoformat(stats["best_date"]).strftime("%b %d, %Y")),
     ]
     col = (W - 80) / len(blocks)
+    colors = [t.c1, t.c2, t.c3, t.c1, t.c2]
     for i, (label, value, unit) in enumerate(blocks):
         cx = 40 + col * i + col / 2
         out.append(f'<g class="up" style="animation-delay:{i * 0.12:.2f}s">'
                    f'<text class="lbl" x="{cx}" y="50" text-anchor="middle">{label}</text>'
-                   f'<text class="val" x="{cx}" y="100" text-anchor="middle" fill="url(#neon)">{value}</text>'
                    f'<text class="unit" x="{cx}" y="126" text-anchor="middle">{esc(unit)}</text></g>')
+        out.append(odometer(f"o{i}", value, cx, 100, colors[i], 0.3 + i * 0.15))
         if i:
             x = 40 + col * i
             out.append(f'<line x1="{x}" y1="36" x2="{x}" y2="126" stroke="{t.line}"/>')

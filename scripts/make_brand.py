@@ -12,9 +12,10 @@ SECTIONS = [
     ("terminal", "02", "whoami.sh", "Live Terminal"),
     ("arsenal", "03", "stack.json", "Tech Arsenal"),
     ("work", "04", "projects/", "Featured Work"),
-    ("activity", "05", "git log", "Contribution Matrix"),
-    ("insights", "06", "analytics.py", "GitHub Analytics"),
-    ("connect", "07", "contact.sh", "Let’s Build Together"),
+    ("journey", "05", "timeline.log", "The Journey"),
+    ("activity", "06", "git log", "Contribution Matrix"),
+    ("insights", "07", "analytics.py", "GitHub Analytics"),
+    ("connect", "08", "contact.sh", "Let’s Build Together"),
 ]
 
 RAIN_CHARS = "01{}[]<>/=;:$#*+-~ABCDEF0123456789"

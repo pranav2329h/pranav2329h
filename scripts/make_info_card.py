@@ -1,11 +1,19 @@
 #!/usr/bin/env python3
-"""Generate the identity card: animated photo (ASCII decode -> photo -> glitch) + neofetch facts.
+"""Generate the identity card: animated pixel-art portrait + neofetch facts.
+
+Portrait loop (CYCLE seconds):
+  1. 8-bit pixels pop in one by one          (pixel art, 24x30 grid, quantised palette)
+  2. pixels burst away revealing 48x60 sprite (de-pixelation)
+  3. sprite resolves into the real photo      (scan beam + HUD)
+  4. RGB glitch slices
+  5. photo dissolves into an ASCII rendering, then fades out and loops
 
 The photo comes from data/avatar.jpg (create it with scripts/set_photo.py). Without
 it, an animated monogram is shown instead. Live stats come from contributions.json.
 """
 import base64
 import io
+import random
 
 from contrib_stats import compute_stats
 from theme import (AVATAR, MONO, SANS, THEMES, esc, load_json, load_profile, neon_gradient,
@@ -14,36 +22,76 @@ from theme import (AVATAR, MONO, SANS, THEMES, esc, load_json, load_profile, neo
 W, H = 1200, 540
 PX, PY, PW, PH = 40, 76, 336, 420          # photo frame (4:5)
 ROW_X, VAL_X, ROW_Y0, ROW_STEP = 430, 570, 150, 28
+GRID_C, GRID_R = 24, 30                     # pop-in pixel grid (14px cells)
+SPRITE_C, SPRITE_R = 48, 60                 # intermediate sprite
 ASCII_COLS, ASCII_ROWS = 48, 36
 RAMP = " .:-=+*#%@"
-CYCLE = 14  # seconds for one ASCII -> photo -> glitch loop
+ASCII_THRESHOLD = 0.42                      # raise if the background is noisy
+CYCLE = 16
+POP_SPREAD = 1.6                            # seconds over which pixels pop in
+
+
+def b64png(img) -> str:
+    buf = io.BytesIO()
+    img.save(buf, "PNG", optimize=True)
+    return base64.b64encode(buf.getvalue()).decode("ascii")
 
 
 def load_avatar():
-    """Return (jpeg_base64, grayscale ASCII-ready image) or None."""
+    """Prepare every representation of the photo the animation needs, or None."""
     if not AVATAR.exists():
         return None
-    from PIL import Image, ImageOps  # only needed when a photo is present
+    from PIL import Image, ImageEnhance, ImageFilter, ImageOps  # only needed when a photo is present
 
     img = ImageOps.exif_transpose(Image.open(AVATAR)).convert("RGB")
     img = ImageOps.fit(img, (PW * 3 // 2, PH * 3 // 2), Image.Resampling.LANCZOS, centering=(0.5, 0.35))
     buf = io.BytesIO()
-    img.save(buf, "JPEG", quality=82, optimize=True, progressive=True)
-    gray = ImageOps.autocontrast(img.convert("L"), cutoff=2)
+    img.save(buf, "JPEG", quality=80, optimize=True, progressive=True)
+
+    # Pixel art: shrink, punch up saturation, quantise to a small retro palette.
+    punchy = ImageEnhance.Color(ImageEnhance.Contrast(img).enhance(1.15)).enhance(1.25)
+    grid = punchy.resize((GRID_C, GRID_R), Image.Resampling.BOX).quantize(16, Image.Quantize.MEDIANCUT).convert("RGB")
+    sprite = punchy.resize((SPRITE_C, SPRITE_R), Image.Resampling.BOX).quantize(32, Image.Quantize.MEDIANCUT).convert("RGB")
+
+    # Equalise + edge-enhance so features survive the 48x36 downsample.
+    gray = ImageOps.equalize(img.convert("L")).filter(ImageFilter.EDGE_ENHANCE_MORE)
     small = gray.resize((ASCII_COLS, ASCII_ROWS), Image.Resampling.LANCZOS)
-    return base64.b64encode(buf.getvalue()).decode("ascii"), small
+    return {
+        "jpeg": base64.b64encode(buf.getvalue()).decode("ascii"),
+        "grid": list(zip(*[iter(grid.tobytes())] * 3)),  # RGB byte triples
+        "sprite": b64png(sprite),
+        "ascii": small,
+    }
 
 
-def ascii_rows(small, dark: bool):
-    px = list(small.getdata())
-    rows = []
-    for y in range(ASCII_ROWS):
-        line = ""
-        for b in px[y * ASCII_COLS:(y + 1) * ASCII_COLS]:
-            level = b / 255 if dark else 1 - b / 255   # bright text on dark, dark text on light
-            line += RAMP[min(len(RAMP) - 1, int(level * len(RAMP)))]
-        rows.append(line)
-    return rows
+def ink(b: int) -> float:
+    """Map brightness to glyph density: light walls go blank, hair/glasses/shirt go dense."""
+    return max(0.0, (1 - b / 255 - ASCII_THRESHOLD) / (1 - ASCII_THRESHOLD)) ** 0.75
+
+
+def ascii_rows(small):
+    # The photo has a bright background, so dark areas (hair, glasses, shirt) get the
+    # densest glyphs - it reads like an ink sketch in both themes.
+    px = small.tobytes()  # one byte per pixel (mode L)
+    return [
+        "".join(RAMP[min(len(RAMP) - 1, int(ink(b) * len(RAMP)))] for b in px[y * ASCII_COLS:(y + 1) * ASCII_COLS])
+        for y in range(ASCII_ROWS)
+    ]
+
+
+def pixel_layer(grid, x, y):
+    rng = random.Random(42)
+    cw, ch = PW / GRID_C, PH / GRID_R
+    cells = []
+    for r in range(GRID_R):
+        for c in range(GRID_C):
+            red, green, blue = grid[r * GRID_C + c]
+            delay = rng.uniform(0, POP_SPREAD) * 0.6 + (r / GRID_R) * POP_SPREAD * 0.4  # loosely top-down
+            cells.append(
+                f'<rect x="{x + c * cw:.0f}" y="{y + r * ch:.0f}" width="{cw + .5:g}" height="{ch + .5:g}" '
+                f'fill="#{red:02x}{green:02x}{blue:02x}" style="animation-delay:{delay:.2f}s"/>'
+            )
+    return "".join(cells)
 
 
 def photo_panel(t, avatar, handle):
@@ -51,33 +99,36 @@ def photo_panel(t, avatar, handle):
     out = [
         f'<clipPath id="frame"><rect x="{x}" y="{y}" width="{w}" height="{h}" rx="18"/></clipPath>',
         f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="18" fill="{t.panel}"/>',
-        f'<g clip-path="url(#frame)">',
+        '<g clip-path="url(#frame)">',
     ]
     if avatar:
-        b64, small = avatar
-        href = f"data:image/jpeg;base64,{b64}"
+        # Embed the JPEG once; every layer that needs it references it with <use>.
+        photo_def = (f'<image id="ph" href="data:image/jpeg;base64,{avatar["jpeg"]}" x="{x}" y="{y}" width="{w}" height="{h}" '
+                     f'preserveAspectRatio="xMidYMid slice"/>')
+        photo = '<use href="#ph"/>'
         cell_h = h / ASCII_ROWS
-        rows = ascii_rows(small, t.name == "dark")
         ascii_text = "".join(
             f'<text x="{x + 4}" y="{y + (i + 1) * cell_h - 2:.1f}" textLength="{w - 8}" lengthAdjust="spacingAndGlyphs" '
             f'xml:space="preserve">{esc(r)}</text>'
-            for i, r in enumerate(rows)
+            for i, r in enumerate(ascii_rows(avatar["ascii"]))
         )
-        img = f'<image href="{href}" x="{x}" y="{y}" width="{w}" height="{h}" preserveAspectRatio="xMidYMid slice"/>'
         slices = "".join(
             f'<clipPath id="s{i}"><rect x="{x}" y="{y + sy}" width="{w}" height="{sh}"/></clipPath>'
-            for i, (sy, sh) in enumerate([(70, 26), (190, 14), (300, 34)])
+            for i, (sy, sh) in enumerate([(84, 24), (176, 14), (300, 34)])
         )
         out += [
-            f"<defs>{slices}"
+            f"<defs>{photo_def}{slices}"
             f'<clipPath id="decode"><rect x="{x}" y="{y}" width="{w}" height="0">'
-            f'<animate attributeName="height" values="0;{h};{h}" keyTimes="0;0.15;1" dur="{CYCLE}s" repeatCount="indefinite"/>'
+            f'<animate attributeName="height" values="0;0;{h};{h}" keyTimes="0;0.78;0.88;1" dur="{CYCLE}s" repeatCount="indefinite"/>'
             f"</rect></clipPath></defs>",
-            f'<g class="photo">{img}'
-            f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="url(#tint)"/></g>',
-            *(f'<g class="glitch g{i}" clip-path="url(#s{i})">{img}'
+            f'<g class="photo">{photo}<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="url(#tint)"/></g>',
+            *(f'<g class="glitch g{i}" clip-path="url(#s{i})">{photo}'
               f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{c}" opacity=".35"/></g>'
               for i, c in enumerate([t.c1, t.c3, t.c2])),
+            f'<image class="sprite" href="data:image/png;base64,{avatar["sprite"]}" x="{x}" y="{y}" width="{w}" height="{h}" '
+            f'preserveAspectRatio="none" image-rendering="optimizeSpeed" style="image-rendering:pixelated"/>',
+            f'<g class="pxs">{pixel_layer(avatar["grid"], x, y)}</g>',
+            f'<rect class="asciibg" x="{x}" y="{y}" width="{w}" height="{h}" fill="{t.bg}"/>',
             f'<g class="ascii" clip-path="url(#decode)">{ascii_text}</g>',
         ]
     else:
@@ -87,17 +138,21 @@ def photo_panel(t, avatar, handle):
             f'<circle cx="{x + w / 2}" cy="{y + h / 2 - 20}" r="90" fill="none" stroke="{t.line}"/>',
             f'<text class="mono" x="{x + w / 2}" y="{y + h / 2 + 8}" text-anchor="middle" fill="url(#neon)">PH</text>',
         ]
-    # shared HUD: CRT lines, scan beam, labels, brackets, travelling border light
     out += [
         f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="url(#crt)"/>',
         f'<rect class="scan" x="{x}" y="{y - 70}" width="{w}" height="70" fill="url(#beam)"/>',
+        f'<rect x="{x}" y="{y}" width="{w}" height="44" fill="url(#shadeTop)"/>',
         f'<rect x="{x}" y="{y + h - 54}" width="{w}" height="54" fill="url(#shade)"/>',
         "</g>",
-        f'<text class="hud" x="{x + 16}" y="{y + 26}"><tspan class="pulse" style="fill:{t.c3}">●</tspan> '
-        f'{"IMG.DECODE" if avatar else "ID.CARD"}</text>',
-        *([f'<text class="hud ascii" x="{x + w - 16}" y="{y + 26}" text-anchor="end">ascii → rgb</text>',
-           f'<text class="hud photo" x="{x + w - 16}" y="{y + 26}" text-anchor="end">rgb ✔</text>']
-          if avatar else [f'<text class="hud" x="{x + w - 16}" y="{y + 26}" text-anchor="end">v1.0</text>']),
+        f'<text class="hud" x="{x + 16}" y="{y + 27}"><tspan class="pulse" style="fill:{t.c3}">●</tspan> '
+        f'{"REC" if avatar else "ID.CARD"}</text>',
+    ]
+    if avatar:
+        for cls, label in (("lbl1", "8-BIT ▸ 24×30"), ("lbl2", "RGB ✔ HI-RES"), ("lbl3", "ASCII ▸ TXT")):
+            out.append(f'<text class="hud {cls}" x="{x + w - 16}" y="{y + 27}" text-anchor="end">{label}</text>')
+    else:
+        out.append(f'<text class="hud" x="{x + w - 16}" y="{y + 27}" text-anchor="end">v1.0</text>')
+    out += [
         f'<text class="tag" x="{x + 16}" y="{y + h - 20}">{esc(handle.upper())} '
         f'<tspan style="fill:{t.ok}">// VERIFIED ✔</tspan></text>',
         f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="18" fill="none" stroke="{t.line}" stroke-width="1.5"/>',
@@ -110,6 +165,21 @@ def photo_panel(t, avatar, handle):
     return out
 
 
+# Phase keyframes (percent of CYCLE). Pixels own delays shift them by <= POP_SPREAD s.
+PHASE_CSS = f"""
+@keyframes px{{0%{{opacity:0;transform:scale(0)}}4%{{opacity:1;transform:scale(1)}}29%{{opacity:1;transform:scale(1)}}33%,100%{{opacity:0;transform:scale(2.2)}}}}
+.pxs rect{{opacity:0;transform-box:fill-box;transform-origin:center;animation:px {CYCLE}s cubic-bezier(.2,.8,.2,1) infinite both}}
+@keyframes sprite{{0%,16%{{opacity:0}}17%,40%{{opacity:1}}45%,100%{{opacity:0}}}}.sprite{{animation:sprite {CYCLE}s steps(1,end) infinite}}
+@keyframes photo{{0%,16%{{opacity:0}}17%,82%{{opacity:1}}86%,100%{{opacity:0}}}}.photo{{animation:photo {CYCLE}s linear infinite}}
+@keyframes glitch{{0%,71.9%{{opacity:0;transform:none}}72%{{opacity:1;transform:translateX(-14px)}}73%{{transform:translateX(12px)}}74%{{transform:translateX(-7px)}}75%{{transform:translateX(9px)}}76%,100%{{opacity:0;transform:none}}}}
+.glitch{{opacity:0;animation:glitch {CYCLE}s steps(1) infinite}}.g1{{animation-delay:-.15s}}.g2{{animation-delay:.1s}}
+@keyframes ascii{{0%,77%{{opacity:0}}80%,95%{{opacity:1}}99%,100%{{opacity:0}}}}.ascii,.asciibg{{animation:ascii {CYCLE}s linear infinite}}
+@keyframes lbl1{{0%,40%{{opacity:1}}42%,100%{{opacity:0}}}}.lbl1{{animation:lbl1 {CYCLE}s steps(1) infinite}}
+@keyframes lbl2{{0%,41%{{opacity:0}}42%,78%{{opacity:1}}79%,100%{{opacity:0}}}}.lbl2{{opacity:0;animation:lbl2 {CYCLE}s steps(1) infinite}}
+@keyframes lbl3{{0%,78%{{opacity:0}}79%,100%{{opacity:1}}}}.lbl3{{opacity:0;animation:lbl3 {CYCLE}s steps(1) infinite}}
+"""
+
+
 def render(t, profile, stats, avatar):
     rows = [tuple(r) for r in profile["info"]]
     if stats:
@@ -118,16 +188,18 @@ def render(t, profile, stats, avatar):
     rows.append(("UPTIME", f"Shipping on GitHub since {profile['since']}"))
 
     out = [
-        svg_open(W, H, f"{profile['name']} identity card"),
+        svg_open(W, H, f"{profile['name']} identity card with animated pixel-art portrait"),
         "<defs>",
         neon_gradient(t, "neon", dur="5s"),
-        f'<pattern id="crt" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="{t.bg}" opacity=".18"/></pattern>',
+        f'<pattern id="crt" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" opacity=".12"/></pattern>',
         f'<linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{t.c1}" stop-opacity="0"/>'
-        f'<stop offset=".85" stop-color="{t.c1}" stop-opacity=".28"/><stop offset="1" stop-color="{t.c1}" stop-opacity=".9"/></linearGradient>',
+        f'<stop offset=".85" stop-color="{t.c1}" stop-opacity=".25"/><stop offset="1" stop-color="{t.c1}" stop-opacity=".9"/></linearGradient>',
         f'<linearGradient id="shade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{t.bg}" stop-opacity="0"/>'
         f'<stop offset="1" stop-color="{t.bg}" stop-opacity=".92"/></linearGradient>',
-        f'<linearGradient id="tint" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{t.c1}" stop-opacity=".10"/>'
-        f'<stop offset="1" stop-color="{t.c2}" stop-opacity=".16"/></linearGradient>',
+        f'<linearGradient id="shadeTop" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{t.bg}" stop-opacity=".75"/>'
+        f'<stop offset="1" stop-color="{t.bg}" stop-opacity="0"/></linearGradient>',
+        f'<linearGradient id="tint" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{t.c1}" stop-opacity=".08"/>'
+        f'<stop offset="1" stop-color="{t.c2}" stop-opacity=".14"/></linearGradient>',
         "</defs>",
         "<style>",
         f".k{{font:700 15px {MONO};fill:{t.c1}}}",
@@ -136,12 +208,8 @@ def render(t, profile, stats, avatar):
         f".hud{{font:700 11px {MONO};fill:{t.text};letter-spacing:1.5px}}",
         f".tag{{font:700 12px {MONO};fill:{t.text};letter-spacing:1.5px}}",
         f".mono{{font:800 92px {SANS}}}",
-        f"g.ascii text{{font:600 11.6px {MONO};fill:{t.c1}}}",
-        f"@keyframes asciiFade{{0%,24%{{opacity:1}}32%,100%{{opacity:0}}}}.ascii{{animation:asciiFade {CYCLE}s linear infinite}}",
-        f"@keyframes photoFade{{0%,24%{{opacity:0}}32%,84%{{opacity:1}}92%,100%{{opacity:0}}}}.photo{{animation:photoFade {CYCLE}s linear infinite}}",
-        "@keyframes glitch{0%,79.9%{opacity:0;transform:none}80%{opacity:1;transform:translateX(-14px)}"
-        "81%{transform:translateX(12px)}82%{transform:translateX(-7px)}83%{transform:translateX(9px)}84%,100%{opacity:0;transform:none}}",
-        f".glitch{{opacity:0;animation:glitch {CYCLE}s steps(1) infinite}}.g1{{animation-delay:-.15s}}.g2{{animation-delay:.1s}}",
+        f"g.ascii text{{font:700 11.6px {MONO};fill:{t.c1}}}",
+        PHASE_CSS,
         f"@keyframes scan{{from{{transform:translateY(0)}}to{{transform:translateY({PH + 70}px)}}}}.scan{{animation:scan 3.2s linear infinite}}",
         "@keyframes trail{to{stroke-dashoffset:-1000}}.trail{animation:trail 6s linear infinite}",
         "@keyframes spin{to{transform:rotate(360deg)}}",

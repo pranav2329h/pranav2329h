@@ -38,6 +38,10 @@
     {"cmd": "git log --stat --since=1.year", "out": [["c3", "{total} contributions · {active} active days · {longest}-day best streak"]]},
     {"cmd": "echo $STATUS", "out": [["ok", "✔ Open to AI/ML, full-stack & DevOps opportunities"]]}
   ],
+  "marquee": [
+    ["PYTHON", "REACT", "MACHINE LEARNING", "FLASK", "DJANGO", "EXPLAINABLE AI", "DOCKER", "AWS", "JENKINS", "TERRAFORM", "NEXT.JS"],
+    ["build → ship → iterate", "open to opportunities", "AI × full stack × cloud", "based in Pune, India", "always learning", "clean code, real impact"]
+  ],
   "orbit": [
     ["Python", "React", "Flask", "Django"],
     ["AWS", "Docker", "Jenkins", "Terraform", "Kubernetes", "Linux"],

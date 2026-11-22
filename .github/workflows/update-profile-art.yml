@@ -48,7 +48,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/fetch_repos.py
 
-      - name: Render SVGs
+      - name: Fetch recent commits for the live feed
+        env:
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/fetch_activity.py
+
+      - name: Render SVGs and README
         run: python scripts/build.py
 
       - name: Commit refreshed art
@@ -56,3 +62,5 @@ jobs:
         with:
           commit_message: "chore: refresh profile art [skip ci]"
           file_pattern: "README.md data/*.json assets/"
+          # Credit the bot, not me, so daily refreshes don't inflate my contribution graph.
+          commit_author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"

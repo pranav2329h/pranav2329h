@@ -80,6 +80,7 @@ def main():
         badge("LinkedIn", "Connect", "linkedin", linkedin),
         badge("Email", "Say hello", "gmail", f"mailto:{email}"),
     ])
+    feed = (asset("feed.svg", "Live feed of my latest commits, scrolling") if (ROOT / "assets/dark/feed.svg").exists() else "")
     views = (f'<img src="https://komarev.com/ghpvc/?username={user}&label=Profile+Views&color={hexs(DARK.c1)}'
              f'&style=for-the-badge" alt="Profile views" />')
 
@@ -100,9 +101,11 @@ def main():
 {views}
 </p>
 
+{asset("marquee.svg", "Scrolling ticker of skills and values")}
+
 {asset("titles/about.svg", "01 · The Engineer")}
 
-{asset("info-card.svg", "Identity card with animated portrait and quick facts")}
+{asset("info-card.svg", "Identity card: my photo animates from 8-bit pixel art to hi-res to ASCII, next to quick facts")}
 
 <p><em>I build intelligent systems end to end, from training explainable ML models<br />
 to shipping them behind clean React interfaces on containerised AWS infrastructure.</em></p>
@@ -131,13 +134,19 @@ to shipping them behind clean React interfaces on containerised AWS infrastructu
 
 {chr(10).join(cards)}
 
-{asset("titles/activity.svg", "05 · Contribution Matrix")}
+{asset("titles/journey.svg", "05 · The Journey")}
 
-{asset("contrib-heatmap.svg", "Contribution matrix with yearly totals and streaks")}
+{asset("timeline.svg", "Animated timeline from joining GitHub to today")}
+
+{asset("titles/activity.svg", "06 · Contribution Matrix")}
+
+{asset("contrib-heatmap.svg", "Contribution matrix with rolling counters, yearly totals and streaks")}
+
+{feed}
 
 {themed_url(snake, "Snake eating my contribution graph")}
 
-{asset("titles/insights.svg", "06 · GitHub Analytics")}
+{asset("titles/insights.svg", "07 · GitHub Analytics")}
 
 {themed_url(stats, "GitHub stats", "49%")}
 {themed_url(langs, "Top languages", "49%")}
@@ -146,7 +155,7 @@ to shipping them behind clean React interfaces on containerised AWS infrastructu
 
 <a href="https://github.com/{user}/TensorTonic-Solutions"><img src="https://www.tensortonic.com/api/badge/{user}.svg" width="60%" alt="TensorTonic verified ML solutions" /></a>
 
-{asset("titles/connect.svg", "07 · Let’s Build Together")}
+{asset("titles/connect.svg", "08 · Let’s Build Together")}
 
 <p>Open to <b>AI/ML</b>, <b>full-stack</b> and <b>DevOps</b> roles, internships and collaborations.<br />
 The fastest way to reach me is <a href="mailto:{email}">{email}</a>.</p>

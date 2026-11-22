@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="150" viewBox="0 0 1200 150" role="img" aria-label="Scrolling ticker: PYTHON · REACT · MACHINE LEARNING · FLASK · DJANGO · EXPLAINABLE AI · DOCKER · AWS · JENKINS · TERRAFORM · NEXT.JS · build → ship → iterate · open to opportunities · AI × full stack × cloud · based in Pune, India · always learning · clean code, real impact"><title>Scrolling ticker: PYTHON · REACT · MACHINE LEARNING · FLASK · DJANGO · EXPLAINABLE AI · DOCKER · AWS · JENKINS · TERRAFORM · NEXT.JS · build → ship → iterate · open to opportunities · AI × full stack × cloud · based in Pune, India · always learning · clean code, real impact</title>
+<defs>
+<linearGradient id="neon" x1="0" y1="0" x2="1" y2="0" spreadMethod="repeat"><stop offset="0" stop-color="#22D3EE"/><stop offset="0.33" stop-color="#A78BFA"/><stop offset="0.66" stop-color="#F472B6"/><stop offset="1" stop-color="#22D3EE"/><animateTransform attributeName="gradientTransform" type="translate" values="0 0;1 0" dur="4s" repeatCount="indefinite"/></linearGradient>
+<linearGradient id="edge" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".08" stop-color="#fff"/><stop offset=".92" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<mask id="fade"><rect width="1200" height="150" fill="url(#edge)"/></mask>
+</defs>
+<style>
+.b1 text{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;font-weight:900;letter-spacing:1px}
+.b2 text{font-family:'SF Mono', 'JetBrains Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;font-weight:600;letter-spacing:0}
+@keyframes left{from{transform:translateX(0)}to{transform:translateX(-2930.1px)}}
+@keyframes right{from{transform:translateX(-1663.2px)}to{transform:translateX(0)}}
+.b1{animation:left 65.1s linear infinite}.b2{animation:right 55.4s linear infinite}
+</style>
+<rect width="1200" height="150" rx="16" fill="#161B22"/>
+<rect y="84" width="1200" height="54" fill="#0D1117" opacity=".7"/>
+<g mask="url(#fade)"><g class="b1" style="--w:2930.1px;font-size:34px"><text x="0.0" y="62" style="fill:none;stroke:url(#neon);stroke-width:1.2" xml:space="preserve">PYTHON  ✦  REACT  ✦  MACHINE LEARNING  ✦  FLASK  ✦  DJANGO  ✦  EXPLAINABLE AI  ✦  DOCKER  ✦  AWS  ✦  JENKINS  ✦  TERRAFORM  ✦  NEXT.JS  ✦  </text><text x="2930.1" y="62" style="fill:none;stroke:url(#neon);stroke-width:1.2" xml:space="preserve">PYTHON  ✦  REACT  ✦  MACHINE LEARNING  ✦  FLASK  ✦  DJANGO  ✦  EXPLAINABLE AI  ✦  DOCKER  ✦  AWS  ✦  JENKINS  ✦  TERRAFORM  ✦  NEXT.JS  ✦  </text></g><g class="b2" style="--w:1663.2px;font-size:18px"><text x="0.0" y="118" style="fill:#E6EDF3" xml:space="preserve">build → ship → iterate  ✦  open to opportunities  ✦  AI × full stack × cloud  ✦  based in Pune, India  ✦  always learning  ✦  clean code, real impact  ✦  </text><text x="1663.2" y="118" style="fill:#E6EDF3" xml:space="preserve">build → ship → iterate  ✦  open to opportunities  ✦  AI × full stack × cloud  ✦  based in Pune, India  ✦  always learning  ✦  clean code, real impact  ✦  </text></g></g>
+<rect x=".5" y=".5" width="1199" height="149" rx="16" fill="none" stroke="#30363D"/>
+</svg>
