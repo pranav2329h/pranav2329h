@@ -1,6 +1,12 @@
 [
   {
     "repo": "pranav2329h",
+    "sha": "5cfa7a8",
+    "message": "feat: add automated dynamic profile art generation and update README layout",
+    "date": "2026-11-22"
+  },
+  {
+    "repo": "pranav2329h",
     "sha": "eafa20e",
     "message": "feat: add dynamic profile generation scripts, workflows, and theme assets",
     "date": "2026-11-21"
@@ -76,11 +82,5 @@
     "sha": "b235733",
     "message": "2nd update",
     "date": "2026-10-02"
-  },
-  {
-    "repo": "expense-tracker",
-    "sha": "384d577",
-    "message": "Build personal expense tracker (React + Firebase + Vercel)",
-    "date": "2026-10-01"
   }
 ]
