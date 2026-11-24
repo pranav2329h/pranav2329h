@@ -42,5 +42,5 @@
 <line x1="1040.0" y1="148" x2="1040.0" y2="126" stroke="#D0D7DE" stroke-width="2" stroke-dasharray="3 4"/>
 <circle class="ping" cx="1040.0" cy="162" r="10" fill="#1A7F37" style="animation-delay:3.50s"/>
 <circle class="node" cx="1040.0" cy="162" r="11" fill="#FFFFFF" stroke="#1A7F37" stroke-width="4" style="animation-delay:3.50s"/>
-<g class="lab" style="--d:-12px;animation-delay:3.60s"><text class="date" x="1040.0" y="70" text-anchor="middle" style="fill:#1A7F37">TODAY</text><text class="title" x="1040.0" y="96" text-anchor="middle">Now</text><text class="sub" x="1040.0" y="116" text-anchor="middle">455 contributions this year</text></g>
+<g class="lab" style="--d:-12px;animation-delay:3.60s"><text class="date" x="1040.0" y="70" text-anchor="middle" style="fill:#1A7F37">TODAY</text><text class="title" x="1040.0" y="96" text-anchor="middle">Now</text><text class="sub" x="1040.0" y="116" text-anchor="middle">465 contributions this year</text></g>
 </svg>
