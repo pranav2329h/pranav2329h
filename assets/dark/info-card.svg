@@ -75,8 +75,8 @@ g.ascii text{font:700 11.6px 'SF Mono', 'JetBrains Mono', 'Cascadia Code', Conso
 <g class="row" style="animation-delay:0.70s"><text class="k" x="430" y="298">DATA</text><text class="v" x="570" y="298">MongoDB  ·  MySQL  ·  Firebase</text></g>
 <g class="row" style="animation-delay:0.80s"><text class="k" x="430" y="326">CLOUD</text><text class="v" x="570" y="326">AWS  ·  Docker  ·  Terraform  ·  Jenkins</text></g>
 <g class="row" style="animation-delay:0.90s"><text class="k" x="430" y="354">LEARNING</text><text class="v" x="570" y="354">Kubernetes  ·  MLOps</text></g>
-<g class="row" style="animation-delay:1.00s"><text class="k" x="430" y="382">COMMITS</text><text class="v" x="570" y="382">473 contributions in the last year</text></g>
-<g class="row" style="animation-delay:1.10s"><text class="k" x="430" y="410">STREAK</text><text class="v" x="570" y="410">2 days current  ·  25 days best</text></g>
+<g class="row" style="animation-delay:1.00s"><text class="k" x="430" y="382">COMMITS</text><text class="v" x="570" y="382">475 contributions in the last year</text></g>
+<g class="row" style="animation-delay:1.10s"><text class="k" x="430" y="410">STREAK</text><text class="v" x="570" y="410">1 days current  ·  25 days best</text></g>
 <g class="row" style="animation-delay:1.20s"><text class="k" x="430" y="438">UPTIME</text><text class="v" x="570" y="438">Shipping on GitHub since 2023</text></g>
 <rect x="430" y="462" width="30" height="16" rx="4" fill="#0C4A5E"/>
 <rect x="466" y="462" width="30" height="16" rx="4" fill="#0E7490"/>
